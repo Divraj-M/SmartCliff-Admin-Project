@@ -15,12 +15,10 @@ Open the Browser with URL
     Maximize Browser Window
     Set Selenium Implicit Wait    5
 
-*** Keywords ***
 Fill the valid Login Credentials
     Input Text    xpath://input[@id='signin-email']    ${valid_username}
     Input Password    xpath://input[@id='signin-password']    ${valid_password}
     Click Button    xpath://button[@id='signin-submit']
-
 
 Close browser session
     Close Browser
