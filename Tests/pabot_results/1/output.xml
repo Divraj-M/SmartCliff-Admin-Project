@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-28T16:50:56.572112" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests">
+<suite id="s1-s1" name="LoginTest" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\LoginTest.robot">
+<test id="s1-s1-t1" name="Validate Login with" line="16">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:50:57.834890" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-28T16:50:57.834187" elapsed="2.510357"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:00.345574" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T16:51:00.344970" elapsed="1.569687"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-28T16:51:01.915347" elapsed="2.093852"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-28T16:51:04.009566" elapsed="0.002436"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:50:57.831897" elapsed="6.180562"/>
+</kw>
+<kw name="Validate Login in SmartCliff">
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:04.016017" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:04.015227" elapsed="0.434536"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:04.450917" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-28T16:51:04.503708" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:04.450216" elapsed="0.296741"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:04.747759" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:04.747261" elapsed="0.483527"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-28T16:51:04.014479" elapsed="1.216620"/>
+</kw>
+<if>
+<branch type="IF" condition="'${email}' == '' and '${password}'==''">
+<kw name="Verify the user get error message by both email and password field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:05.233414" elapsed="0.000460"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:05.231605" elapsed="0.002406"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' == ''">
+<kw name="Verify the user get the error message by email field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:05.235887" elapsed="0.000409"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:05.234182" elapsed="0.002238"/>
+</branch>
+<branch type="ELSE IF" condition="'${password}' == ''">
+<kw name="Verify the user get error message by password field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:05.237927" elapsed="0.000258"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:05.236545" elapsed="0.001757"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' != '' and '${password}' != ''">
+<kw name="Verify the user is successfully logged in" owner="LoginResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:05.240358" level="INFO">Verifying element 'xpath://h5[@class='MuiTypography-root MuiTypography-h5 css-1f7j8xw']' contains exact text 'Admin Panel Instructions'.</msg>
+<arg>${instruction}</arg>
+<arg>Admin Panel Instructions</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-28T16:51:05.239796" elapsed="9.286066"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:05.239153" elapsed="9.286887"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:05.238399" elapsed="9.287714"/>
+</branch>
+<status status="PASS" start="2025-05-28T16:51:05.231360" elapsed="9.294830"/>
+</if>
+<arg>email=abcraj@gmail.com</arg>
+<arg>password=Divraj@123</arg>
+<status status="PASS" start="2025-05-28T16:51:04.013581" elapsed="10.512692"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T16:51:14.527422" elapsed="2.194869"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:14.526615" elapsed="2.196010"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:50:57.829310" elapsed="18.893498"/>
+</test>
+<test id="s1-s1-t2" name="Validate Login with" line="16">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:16.730428" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-28T16:51:16.729812" elapsed="1.570054"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:18.300573" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T16:51:18.300134" elapsed="1.817131"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.117727" elapsed="0.055096"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.173118" elapsed="0.002548"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:16.728731" elapsed="3.447180"/>
+</kw>
+<kw name="Validate Login in SmartCliff">
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:20.178946" level="INFO">Typing text '' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.178262" elapsed="0.211095"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:20.390315" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-28T16:51:20.436008" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.389725" elapsed="0.155240"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:20.545704" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.545277" elapsed="0.156372"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-28T16:51:20.177508" elapsed="0.524324"/>
+</kw>
+<if>
+<branch type="IF" condition="'${email}' == '' and '${password}'==''">
+<kw name="Verify the user get error message by both email and password field empty" owner="LoginResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:20.703969" level="INFO">Verifying element 'xpath://p[@id='signin-email-helper-text']' contains exact text 'Email is required'.</msg>
+<arg>${error_message_in_email}</arg>
+<arg>Email is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.703487" elapsed="0.029680"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:20.734459" level="INFO">Verifying element 'xpath://p[@id='signin-password-helper-text']' contains exact text 'Password is required'.</msg>
+<arg>${error_message_in_password}</arg>
+<arg>Password is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.733647" elapsed="0.024696"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:20.702835" elapsed="0.055883"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:20.702023" elapsed="0.056844"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' == ''">
+<kw name="Verify the user get the error message by email field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:20.759642" elapsed="0.000236"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:20.759028" elapsed="0.001008"/>
+</branch>
+<branch type="ELSE IF" condition="'${password}' == ''">
+<kw name="Verify the user get error message by password field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:20.760621" elapsed="0.000199"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:20.760145" elapsed="0.000981"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' != '' and '${password}' != ''">
+<kw name="Verify the user is successfully logged in" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:20.761779" elapsed="0.000284"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:20.761238" elapsed="0.000960"/>
+</branch>
+<status status="PASS" start="2025-05-28T16:51:20.701972" elapsed="0.060348"/>
+</if>
+<arg>email=</arg>
+<arg>password=</arg>
+<status status="PASS" start="2025-05-28T16:51:20.176331" elapsed="0.586152"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T16:51:20.764035" elapsed="2.214746"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:20.763075" elapsed="2.216208"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:16.723748" elapsed="6.255798"/>
+</test>
+<test id="s1-s1-t3" name="Validate Login with" line="16">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:22.990805" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-28T16:51:22.989186" elapsed="1.510254"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:24.500571" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T16:51:24.499904" elapsed="1.797962"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.298231" elapsed="0.053395"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.352139" elapsed="0.004742"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:22.986944" elapsed="3.370318"/>
+</kw>
+<kw name="Validate Login in SmartCliff">
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:26.361259" level="INFO">Typing text 'abc@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.360112" elapsed="0.480212"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:26.841213" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-28T16:51:26.999277" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.840643" elapsed="0.291478"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:27.132897" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:27.132402" elapsed="0.162910"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-28T16:51:26.358926" elapsed="0.936601"/>
+</kw>
+<if>
+<branch type="IF" condition="'${email}' == '' and '${password}'==''">
+<kw name="Verify the user get error message by both email and password field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:27.296558" elapsed="0.000473"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:27.295742" elapsed="0.001481"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' == ''">
+<kw name="Verify the user get the error message by email field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:27.298176" elapsed="0.000252"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:27.297419" elapsed="0.001154"/>
+</branch>
+<branch type="ELSE IF" condition="'${password}' == ''">
+<kw name="Verify the user get error message by password field empty" owner="LoginResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:27.300713" level="INFO">Verifying element 'xpath://p[@id='signin-password-helper-text']' contains exact text 'Password is required'.</msg>
+<arg>${error_message_in_password}</arg>
+<arg>Password is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-28T16:51:27.299985" elapsed="0.030290"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:27.299323" elapsed="0.031147"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:27.298692" elapsed="0.031857"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' != '' and '${password}' != ''">
+<kw name="Verify the user is successfully logged in" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:27.331127" elapsed="0.000203"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:27.330634" elapsed="0.000796"/>
+</branch>
+<status status="PASS" start="2025-05-28T16:51:27.295692" elapsed="0.035821"/>
+</if>
+<arg>email=abc@gmail.com</arg>
+<arg>password=</arg>
+<status status="PASS" start="2025-05-28T16:51:26.357868" elapsed="0.973749"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T16:51:27.332820" elapsed="2.217038"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:27.331939" elapsed="2.218180"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:22.981186" elapsed="6.569089"/>
+</test>
+<test id="s1-s1-t4" name="Validate Login with" line="16">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:29.555407" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-28T16:51:29.554719" elapsed="1.395585"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:30.951010" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T16:51:30.950576" elapsed="1.817085"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-28T16:51:32.768005" elapsed="0.039295"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-28T16:51:32.807572" elapsed="0.002668"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:29.553683" elapsed="3.256984"/>
+</kw>
+<kw name="Validate Login in SmartCliff">
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:32.815207" level="INFO">Typing text '' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:32.814490" elapsed="0.200837"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:33.016150" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-28T16:51:33.062607" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:33.015609" elapsed="0.200751"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:33.217235" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:33.216733" elapsed="0.131130"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-28T16:51:32.813101" elapsed="0.534983"/>
+</kw>
+<if>
+<branch type="IF" condition="'${email}' == '' and '${password}'==''">
+<kw name="Verify the user get error message by both email and password field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:33.348975" elapsed="0.000202"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:33.348269" elapsed="0.000996"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' == ''">
+<kw name="Verify the user get the error message by email field empty" owner="LoginResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:33.351733" level="INFO">Verifying element 'xpath://p[@id='signin-email-helper-text']' contains exact text 'Email is required'.</msg>
+<arg>${error_message_in_email}</arg>
+<arg>Email is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-28T16:51:33.351216" elapsed="0.029855"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:33.349902" elapsed="0.031362"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:33.349346" elapsed="0.031999"/>
+</branch>
+<branch type="ELSE IF" condition="'${password}' == ''">
+<kw name="Verify the user get error message by password field empty" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:33.382018" elapsed="0.000238"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:33.381428" elapsed="0.000905"/>
+</branch>
+<branch type="ELSE IF" condition="'${email}' != '' and '${password}' != ''">
+<kw name="Verify the user is successfully logged in" owner="LoginResource">
+<status status="NOT RUN" start="2025-05-28T16:51:33.382699" elapsed="0.000164"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:33.382397" elapsed="0.000544"/>
+</branch>
+<status status="PASS" start="2025-05-28T16:51:33.348228" elapsed="0.034776"/>
+</if>
+<arg>email=</arg>
+<arg>password=Raj@123</arg>
+<status status="PASS" start="2025-05-28T16:51:32.811641" elapsed="0.571447"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T16:51:33.383873" elapsed="2.187996"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:33.383375" elapsed="2.188914"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:29.550981" elapsed="6.021496"/>
+</test>
+<doc>Tests to Login</doc>
+<status status="PASS" start="2025-05-28T16:50:56.628147" elapsed="38.945473"/>
+</suite>
+<status status="PASS" start="2025-05-28T16:50:56.613350" elapsed="38.962430"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
+<stat name="LoginTest" id="s1-s1" pass="4" fail="0" skip="0">Tests.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-28T16:51:16.724020" level="WARN">Multiple tests with name 'Validate Login with' executed in suite 'Tests.LoginTest'.</msg>
+<msg time="2025-05-28T16:51:22.981394" level="WARN">Multiple tests with name 'Validate Login with' executed in suite 'Tests.LoginTest'.</msg>
+<msg time="2025-05-28T16:51:29.551054" level="WARN">Multiple tests with name 'Validate Login with' executed in suite 'Tests.LoginTest'.</msg>
+</errors>
+</robot>

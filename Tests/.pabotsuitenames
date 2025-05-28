@@ -1,5 +1,8 @@
-datasources:36b2ac2984b0e127e811004e74bb8e99436d79a8
+datasources:784504307a0497a7982fe8e0412b7685e495313e
 commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
 suitesfrom:no-suites-from-option
-file:cb2fb8bf82b7a92d8233edcfd0023ffc4f2cdef5
---suite Vision Mission
+file:11b9e100eee727328579812f5bcd0581437e5d27
+--suite Tests.AboutUsTest
+--suite Tests.LoginTest
+--suite Tests.LogoutTest
+--suite Tests.Vision Mission
