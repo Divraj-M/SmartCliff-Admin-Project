@@ -1,0 +1,87 @@
+==============================================================================
+Vision Mission :: Tests to vision&Mission                                     
+==============================================================================
+Verify the user is successfully entered in vision and Mission page      
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vision_Mission.robot:11
+    T:  Verify the user is successfully entered in vision and Mission page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vision_Mission.robot:13
+      Click the about in the menu list    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Resources\Vision_MissionResources.robot:20
+      Click Element    ${AboutinMenu}
+      |  ${AboutinMenu} = xpath://span[contains(text(),'About')] (str)
+______________________________________________________________________________
+| FAIL |
+ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A155CF45+75717]
+	GetHandleVerifier [0x00007FF7A155CFA0+75808]
+	(No symbol) [0x00007FF7A1328F9A]
+	(No symbol) [0x00007FF7A1380D2B]
+	(No symbol) [0x00007FF7A1372394]
+	(No symbol) [0x00007FF7A13A737A]
+	(No symbol) [0x00007FF7A1371C46]
+	(No symbol) [0x00007FF7A13A7590]
+	(No symbol) [0x00007FF7A13CF39C]
+	(No symbol) [0x00007FF7A13A7153]
+	(No symbol) [0x00007FF7A1370421]
+	(No symbol) [0x00007FF7A13711B3]
+	GetHandleVerifier [0x00007FF7A185D71D+3223453]
+	GetHandleVerifier [0x00007FF7A1857CC2+3200322]
+	GetHandleVerifier [0x00007FF7A1875AF3+3322739]
+	GetHandleVerifier [0x00007FF7A1576A1A+180890]
+	GetHandleVerifier [0x00007FF7A157E11F+211359]
+	GetHandleVerifier [0x00007FF7A1565294+109332]
+	GetHandleVerifier [0x00007FF7A1565442+109762]
+	GetHandleVerifier [0x00007FF7A154BA59+4825]
+	BaseThreadInitThunk [0x00007FF89BEB259D+29]
+	RtlUserThreadStart [0x00007FF89CF6AF58+40]
+------------------------------------------------------------------------------
+Verify the Back buttion in Mission and Vission                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vision_Mission.robot:17
+    T:  Verify the Back buttion in Mission and Vission    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vision_Mission.robot:19
+      Click the about in the menu list    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Resources\Vision_MissionResources.robot:20
+      Click Element    ${AboutinMenu}
+      |  ${AboutinMenu} = xpath://span[contains(text(),'About')] (str)
+______________________________________________________________________________
+| FAIL |
+ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A155CF45+75717]
+	GetHandleVerifier [0x00007FF7A155CFA0+75808]
+	(No symbol) [0x00007FF7A1328F9A]
+	(No symbol) [0x00007FF7A1380D2B]
+	(No symbol) [0x00007FF7A1372394]
+	(No symbol) [0x00007FF7A13A737A]
+	(No symbol) [0x00007FF7A1371C46]
+	(No symbol) [0x00007FF7A13A7590]
+	(No symbol) [0x00007FF7A13CF39C]
+	(No symbol) [0x00007FF7A13A7153]
+	(No symbol) [0x00007FF7A1370421]
+	(No symbol) [0x00007FF7A13711B3]
+	GetHandleVerifier [0x00007FF7A185D71D+3223453]
+	GetHandleVerifier [0x00007FF7A1857CC2+3200322]
+	GetHandleVerifier [0x00007FF7A1875AF3+3322739]
+	GetHandleVerifier [0x00007FF7A1576A1A+180890]
+	GetHandleVerifier [0x00007FF7A157E11F+211359]
+	GetHandleVerifier [0x00007FF7A1565294+109332]
+	GetHandleVerifier [0x00007FF7A1565442+109762]
+	GetHandleVerifier [0x00007FF7A154BA59+4825]
+	BaseThreadInitThunk [0x00007FF89BEB259D+29]
+	RtlUserThreadStart [0x00007FF89CF6AF58+40]
+------------------------------------------------------------------------------
+Vision Mission :: Tests to vision&Mission                             | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\pabot_results\0\output.xml

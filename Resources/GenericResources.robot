@@ -13,7 +13,7 @@ Open the Browser with URL
     Create Webdriver    ${browser_name}
     Go To    ${url}
     Maximize Browser Window
-    Set Selenium Implicit Wait    5
+    Set Selenium Implicit Wait    10
 
 Fill the valid Login Credentials
     Input Text    xpath://input[@id='signin-email']    ${valid_username}
