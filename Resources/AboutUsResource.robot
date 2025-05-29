@@ -12,7 +12,7 @@ ${back_btn}    xpath://div[contains(@id,'root')]/div[1]/main/main/div/div/button
 ${DROPZONE_AREA}    xpath://div[contains(@id,'root')]/div[1]/main/main/div/form/div[2]/div
 ${submit_content}    xpath://div[contains(@id,'root')]/div[1]/main/main/div/form/button
 ${content_title_input}    xpath://div[contains(@id,'root')]/div[1]/main/main/div/form/div[1]/div//child::input
-${content_text}    test case 2
+
 ${IMAGE_PATH}    ${CURDIR}${/}about_us_images${/}Sunlit Park Walk.jpg
 ${del_again}    xpath:/html/body/div[2]/div[3]/div/div[2]/button[2]
 ${search_box}    xpath://div[contains(@id,'root')]/div[1]/main/div[2]/div[1]/div[1]/div/div//input
@@ -26,8 +26,9 @@ click about us in side menu
     Click Element    ${about_us}
     
 fill add about us form
-    
-    Wait Until Element Is Not Visible    ${toast}    timeout=15s
+    [Arguments]    ${content_text}
+    # Wait Until Element Is Not Visible    ${toast}    timeout=15s
+    Wait Until Element Is Enabled    ${content_title_input}
     Input Text    ${content_title_input}    ${content_text}
    
     Wait Until Element Is Visible    ${DROPZONE_AREA}
@@ -49,14 +50,17 @@ click add about us button
 
 
 Check new row is added in about us panel
+    [Arguments]    ${content_text}
     Page Should Contain    ${content_text}
 
 delete the new row in about us panel
+    [Arguments]    ${content_text}
      Click Element    xpath=//td[contains(text(),'${content_text}')]//following-sibling::td//button[2]
      Click Button    ${del_again}
      Sleep    1s
 
 the specified row should be removed in about us panel
+    [Arguments]    ${content_text}
     Page Should Not Contain    ${content_text}
 
 click back button in about us from
@@ -64,12 +68,6 @@ click back button in about us from
 
 User should see the AboutUs control panel
     Page Should Contain    About Us Content Panel
-
-enter text in search bar
-    Input Text    ${search_box}    "test"
-
-the rows with matching text should be displayed
-    Extract Titles From Table
     
 Extract Titles From Table
    
@@ -101,3 +99,5 @@ Validate Search Results
     END
 
 
+User should see title waring warning
+     Page Should Contain    Title is required
