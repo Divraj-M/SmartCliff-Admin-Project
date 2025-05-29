@@ -6,7 +6,7 @@ Library    SeleniumLibrary
 ${valid_username}    abcraj@gmail.com
 ${valid_password}    Divraj@123    
 ${url}    https://smart-cliff-admin.vercel.app/
-${browser_name}    Firefox
+${browser_name}    Chrome
 
 *** Keywords ***
 Open the Browser with URL
