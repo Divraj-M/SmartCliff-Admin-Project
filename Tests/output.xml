@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T14:56:40.098349" rpa="false" schemaversion="5">
 <suite id="s1" name="shrineTest" source="C:\Users\drcha\Desktop\Smart_cliif_Project\SmartCliff-Admin-Project\Tests\shrineTest.robot">
 <test id="s1-t1" name=" Verify the shine panel" line="10">
@@ -18,10 +19,32 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T14:56:43.601043" elapsed="0.057670"/>
+=======
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T15:02:18.759898" rpa="false" schemaversion="5">
+<suite id="s1" name="Vission Mission Excel" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vission_Mission_Excel.robot">
+<test id="s1-t1" name="Verify the Vision and Mission" line="16">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:19.794177" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T15:02:19.793963" elapsed="6.439471"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:26.233852" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T15:02:26.233662" elapsed="1.345899"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T15:02:27.580032" elapsed="0.277599"/>
+>>>>>>> c2322272b2565c6d15aa12a0a11cd22965bd0d34
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2025-05-29T14:56:43.659063" elapsed="0.001652"/>
 </kw>
 <status status="PASS" start="2025-05-29T14:56:40.407479" elapsed="3.253577"/>
@@ -558,10 +581,274 @@
 <status status="PASS" start="2025-05-29T14:59:02.461885" elapsed="5.001084"/>
 </kw>
 <status status="PASS" start="2025-05-29T14:59:02.347018" elapsed="5.116327"/>
+=======
+<status status="PASS" start="2025-05-29T15:02:27.857881" elapsed="0.004084"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:19.793239" elapsed="8.068862"/>
+</kw>
+<kw name="Crud operation in Vission and Mission">
+<if>
+<branch type="IF" condition="'${descriptiontext}'==&quot;Welcome to the smartcliff&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T15:02:27.864116" elapsed="0.000035"/>
+</kw>
+<kw name="Verify Vision Added" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:02:27.864308" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T15:02:27.863828" elapsed="0.000549"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;Welcome to the Kiot&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:27.865159" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:27.864833" elapsed="0.163112"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:28.028490" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T15:02:28.035511" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:28.028197" elapsed="0.079510"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:28.108101" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:28.107905" elapsed="0.532042"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:27.864618" elapsed="0.775680"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:30.642365" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:28.641296" elapsed="2.001352"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:30.643592" level="INFO">Clicking element 'xpath://button[contains(@class,'MuiIconButton-root')]'.</msg>
+<arg>${MenuButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:30.643069" elapsed="1.376685"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:32.021063" level="INFO">Clicking element 'xpath://span[contains(text(),'About')]'.</msg>
+<arg>${AboutinMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:32.020499" elapsed="0.245964"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:28.640723" elapsed="3.626148"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:34.269984" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:32.268379" elapsed="2.002092"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:34.272313" level="INFO">Clicking element 'xpath://span[contains(text(),'Vision &amp; Mission')]'.</msg>
+<arg>${Vision&amp;Mission}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:34.271433" elapsed="0.277252"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:32.267581" elapsed="2.281507"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:36.551643" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:34.550669" elapsed="2.001341"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:36.553230" level="INFO">Clicking button 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button'.</msg>
+<arg>${addvisionandmission}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:36.552555" elapsed="0.283710"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:34.549732" elapsed="2.286851"/>
+</kw>
+<kw name="click the Mission in the dropdown" owner="Vision_MissionResources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:38.839556" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:36.838574" elapsed="2.001475"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:38.841207" level="INFO">Clicking element 'xpath://div[contains(text(),'Vision')]'.</msg>
+<arg>xpath://div[contains(text(),'Vision')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:38.840644" elapsed="0.241542"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:41.084278" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:39.082844" elapsed="2.002116"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:41.086543" level="INFO">Clicking element 'xpath://li[@class='MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1km1ehz']'.</msg>
+<arg>${Mission}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:41.085706" elapsed="0.268660"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:36.837163" elapsed="4.517661"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:41.356832" level="INFO">Typing text 'Welcome to the Kiot' into text field 'xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398' and @name='description']'.</msg>
+<arg>${description}</arg>
+<arg>${descriptiontext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:41.356291" elapsed="0.228109"/>
+</kw>
+<arg>${descriptiontext}</arg>
+<status status="PASS" start="2025-05-29T15:02:41.355348" elapsed="0.229290"/>
+</kw>
+<kw name="click the add content" owner="Vision_MissionResources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:42.586589" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:41.585777" elapsed="1.001136"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:42.587830" level="INFO">Clicking element 'xpath://button[contains(text(),'Add Content')]'.</msg>
+<arg>${add_content}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:42.587375" elapsed="0.326955"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${addvisionandmission}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T15:02:42.914704" elapsed="3.045141"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:45.971098" level="INFO">Current page contains text 'Welcome to the Kiot'.</msg>
+<arg>${descriptiontext}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-29T15:02:45.960306" elapsed="0.011044"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:46.972583" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:45.971718" elapsed="1.001109"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:46.973751" level="INFO">Clicking element 'xpath=//td[contains(text(),'Welcome to the Kiot')]//following-sibling::td//button[2]'.</msg>
+<arg>xpath=//td[contains(text(),'${descriptiontext}')]//following-sibling::td//button[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:46.973207" elapsed="0.256551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${deletebtn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T15:02:47.230384" elapsed="0.020017"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:02:47.251424" level="INFO">Clicking element 'xpath://button[contains(@class,'MuiButton-containedError')]'.</msg>
+<arg>${deletebtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T15:02:47.250782" elapsed="0.243548"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T15:02:48.496063" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T15:02:47.494922" elapsed="1.001497"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-05-29T15:03:08.528361" level="INFO">Current page does not contain text 'Welcome to the Kiot'.</msg>
+<arg>${descriptiontext}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-05-29T15:02:48.496985" elapsed="20.031470"/>
+</kw>
+<arg>${descriptiontext}</arg>
+<status status="PASS" start="2025-05-29T15:02:41.585093" elapsed="26.943479"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:27.864421" elapsed="40.664200"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;IronMan&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.528876" elapsed="0.000033"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.529013" elapsed="0.000024"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.529125" elapsed="0.000030"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.529241" elapsed="0.000023"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:03:08.529343" elapsed="0.000022"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.529451" elapsed="0.000024"/>
+</kw>
+<kw name="click the search bar and enter the description" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:03:08.529555" elapsed="0.000022"/>
+</kw>
+<kw name="Verify the search bar" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:03:08.529656" elapsed="0.000022"/>
+</kw>
+<kw name="Delete the description from the table" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:03:08.529766" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T15:03:08.528674" elapsed="0.001142"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;Batman&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.529959" elapsed="0.000025"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.530076" elapsed="0.000023"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.530181" elapsed="0.000022"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.530284" elapsed="0.000023"/>
+</kw>
+<kw name="click the Mission in the dropdown" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.530395" elapsed="0.000021"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:03:08.530495" elapsed="0.000022"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T15:03:08.530605" elapsed="0.000023"/>
+</kw>
+<kw name="add the text to edit in vission" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T15:03:08.530779" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T15:03:08.529851" elapsed="0.000983"/>
+</branch>
+<status status="PASS" start="2025-05-29T15:02:27.863792" elapsed="40.667072"/>
+</if>
+<arg>descriptiontext=Welcome to the Kiot</arg>
+<status status="PASS" start="2025-05-29T15:02:27.862891" elapsed="40.668035"/>
+>>>>>>> c2322272b2565c6d15aa12a0a11cd22965bd0d34
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2025-05-29T14:59:07.465345" elapsed="2.252017"/>
 </kw>
 <status status="PASS" start="2025-05-29T14:59:07.464623" elapsed="2.252964"/>
@@ -1653,11 +1940,29 @@
 <statistics>
 <total>
 <stat pass="10" fail="0" skip="0">All Tests</stat>
+=======
+<status status="PASS" start="2025-05-29T15:03:08.531908" elapsed="4.122743"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:03:08.531514" elapsed="4.123315"/>
+</kw>
+<status status="PASS" start="2025-05-29T15:02:19.791164" elapsed="52.863914"/>
+</test>
+<doc>Tests for Vision &amp; Mission functionality</doc>
+<status status="PASS" start="2025-05-29T15:02:18.761544" elapsed="53.894532"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+>>>>>>> c2322272b2565c6d15aa12a0a11cd22965bd0d34
 </total>
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat name="shrineTest" id="s1" pass="10" fail="0" skip="0">shrineTest</stat>
+=======
+<stat name="Vission Mission Excel" id="s1" pass="1" fail="0" skip="0">Vission Mission Excel</stat>
+>>>>>>> c2322272b2565c6d15aa12a0a11cd22965bd0d34
 </suite>
 </statistics>
 <errors>

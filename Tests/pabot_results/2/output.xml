@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-28T16:50:56.568255" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests">
+<suite id="s1-s1" name="LogoutTest" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\LogoutTest.robot">
+<test id="s1-s1-t1" name="validate successful logout" line="10">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:50:56.965344" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-28T16:50:56.965006" elapsed="1.691751"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:50:58.657621" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T16:50:58.657133" elapsed="1.225388"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-28T16:50:59.884430" elapsed="1.266700"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-28T16:51:01.151690" elapsed="0.005773"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:50:56.963959" elapsed="4.193661"/>
+</kw>
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:01.158875" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:01.158322" elapsed="0.803908"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:01.963232" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-28T16:51:02.117340" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:01.962581" elapsed="0.396284"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:02.360135" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:02.359264" elapsed="0.371955"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:01.157849" elapsed="1.573757"/>
+</kw>
+<kw name="Logout From Current Session" owner="LogoutResource">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${toast}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-28T16:51:02.733909" elapsed="22.477125"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-28T16:51:25.212150" level="INFO">${logout_success} = False</msg>
+<var>${logout_success}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-28T16:51:25.211438" elapsed="0.000771"/>
+</kw>
+<while condition="${RETRY_COUNT} &lt; ${MAX_RETRIES}">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:25.213829" level="INFO">Clicking element 'xpath://*[@id="appbar"]/div/button[2]'.</msg>
+<arg>${user_icon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:25.213322" elapsed="0.165499"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-28T16:51:25.379092" elapsed="0.028325"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:25.408587" level="INFO">Clicking element 'xpath://*[@id="account-menu"]/div[3]/ul/li[2]'.</msg>
+<arg>${logout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-28T16:51:25.407756" elapsed="0.638297"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:26.367554" level="INFO">Current page contains element 'xpath://*[@id="signin-submit"]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.046868" elapsed="0.320941"/>
+</kw>
+<msg time="2025-05-28T16:51:26.368052" level="INFO">${logout_success} = True</msg>
+<var>${logout_success}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${login_btn}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.046395" elapsed="0.321707"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-28T16:51:26.379453" level="INFO">${url} = https://smart-cliff-admin.vercel.app/</msg>
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.368334" elapsed="0.011194"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current URL: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.379816" elapsed="0.000704"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2025-05-28T16:51:26.381262" level="INFO">Exiting for loop altogether.</msg>
+<arg>${logout_success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.380817" elapsed="0.000625"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-05-28T16:51:26.381653" elapsed="0.000222"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${RETRY_COUNT}</var>
+<arg>${RETRY_COUNT} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-05-28T16:51:26.382197" elapsed="0.000238"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:25.212349" elapsed="1.170196"/>
+</iter>
+<status status="PASS" start="2025-05-28T16:51:25.212345" elapsed="1.170297"/>
+</while>
+<if>
+<branch type="IF" condition="not ${logout_success}">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout failed after ${MAX_RETRIES} retries</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-05-28T16:51:26.383475" elapsed="0.000212"/>
+</kw>
+<status status="NOT RUN" start="2025-05-28T16:51:26.382834" elapsed="0.000962"/>
+</branch>
+<status status="PASS" start="2025-05-28T16:51:26.382787" elapsed="0.001097"/>
+</if>
+<status status="PASS" start="2025-05-28T16:51:02.732596" elapsed="23.651386"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T16:51:26.385075" elapsed="2.301220"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:51:26.384363" elapsed="2.302264"/>
+</kw>
+<status status="PASS" start="2025-05-28T16:50:56.963320" elapsed="31.723470"/>
+</test>
+<doc>Test to logout</doc>
+<status status="PASS" start="2025-05-28T16:50:56.633101" elapsed="32.061534"/>
+</suite>
+<status status="PASS" start="2025-05-28T16:50:56.616063" elapsed="32.080403"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="LogoutTest" id="s1-s1" pass="1" fail="0" skip="0">Tests.LogoutTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
