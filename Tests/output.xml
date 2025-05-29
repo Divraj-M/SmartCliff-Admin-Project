@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T19:32:27.019361" rpa="false" schemaversion="5">
+<suite id="s1" name="shineTest" source="C:\Users\drcha\Desktop\Smart_cliif_Project\SmartCliff-Admin-Project\Tests\shineTest.robot">
+<test id="s1-t1" name=" Verify the shine panel" line="10">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:27.287590" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T19:32:27.287381" elapsed="5.649130"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:32.937102" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T19:32:32.936836" elapsed="2.152209"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T19:32:35.089294" elapsed="0.272400"/>
+=======
+<<<<<<< HEAD
 <robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T21:18:05.921222" rpa="false" schemaversion="5">
 <suite id="s1" name="Vission Mission Excel" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vission_Mission_Excel.robot">
 <test id="s1-t1" name="Verify the Vision and Mission" line="16">
@@ -41,10 +62,77 @@
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T16:31:19.207639" elapsed="0.032481"/>
 >>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:32:35.361949" elapsed="0.006572"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:27.286712" elapsed="8.081992"/>
+</kw>
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:35.370459" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:35.369876" elapsed="0.244511"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:35.614781" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T19:32:35.626158" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:35.614556" elapsed="0.089680"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:35.704694" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:35.704449" elapsed="0.325272"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:35.369379" elapsed="0.660495"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:36.031233" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:36.030998" elapsed="4.030631"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:36.030468" elapsed="4.031306"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:40.102431" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:40.102081" elapsed="0.249992"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:40.101482" elapsed="0.250817"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:40.664730" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:40.664124" elapsed="0.278116"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:40.663041" elapsed="0.279590"/>
+</kw>
+<kw name="Verify agin it redirected into shine page" owner="ShineResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:41.103764" level="INFO">Verifying element 'xpath://h4[@class='MuiTypography-root MuiTypography-h4 css-6ubyw9']' contains exact text 'SHINE PANEL'.</msg>
+<arg>${shine_panel}</arg>
+<arg>SHINE PANEL</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-29T19:32:41.103469" elapsed="0.655579"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:41.103026" elapsed="0.656278"/>
+=======
 <<<<<<< HEAD
 <status status="PASS" start="2025-05-29T21:18:09.106165" elapsed="0.001267"/>
 </kw>
@@ -406,10 +494,36 @@
 </kw>
 <status status="PASS" start="2025-05-29T16:31:23.575341" elapsed="1.168426"/>
 >>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:32:41.914147" elapsed="2.978084"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:41.913317" elapsed="2.979139"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:27.285999" elapsed="17.606766"/>
+</test>
+<test id="s1-t2" name=" Validate the shrine panel element in the about" line="18">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:44.895917" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T19:32:44.895627" elapsed="5.491019"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:50.387064" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T19:32:50.386856" elapsed="3.562723"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T19:32:53.949876" elapsed="0.278415"/>
+=======
 <<<<<<< HEAD
 <status status="PASS" start="2025-05-29T21:18:30.326072" elapsed="2.216035"/>
 </kw>
@@ -447,10 +561,95 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T16:31:29.984069" elapsed="0.028053"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:32:54.228655" elapsed="0.005214"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:44.895106" elapsed="9.339010"/>
+</kw>
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:54.329012" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:54.328484" elapsed="0.383103"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:54.712713" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T19:32:54.779156" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:54.712070" elapsed="0.129373"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:54.842547" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:54.842131" elapsed="0.323228"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:54.327519" elapsed="0.838106"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:55.169795" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:55.169317" elapsed="4.174342"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:55.168603" elapsed="4.175301"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:59.345946" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:59.345501" elapsed="0.300512"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:59.344623" elapsed="0.301622"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:32:59.667873" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:32:59.667470" elapsed="0.308281"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:59.666832" elapsed="0.309312"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:00.279934" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:00.279163" elapsed="0.297972"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:00.278274" elapsed="0.299174"/>
+</kw>
+<kw name="Click the back in the add shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:00.656507" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-79xub']'.</msg>
+<arg>${back}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:00.653479" elapsed="0.138951"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:00.652882" elapsed="0.139778"/>
+</kw>
+<kw name="Verify agin it redirected into shine page" owner="ShineResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:00.797206" level="INFO">Verifying element 'xpath://h4[@class='MuiTypography-root MuiTypography-h4 css-6ubyw9']' contains exact text 'SHINE PANEL'.</msg>
+<arg>${shine_panel}</arg>
+<arg>SHINE PANEL</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-29T19:33:00.796836" elapsed="0.412129"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:00.796322" elapsed="0.412792"/>
+=======
 <status status="PASS" start="2025-05-29T16:31:30.012315" elapsed="0.001340"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:31:26.953073" elapsed="3.060695"/>
@@ -2754,10 +2953,36 @@
 <status status="PASS" start="2025-05-29T16:35:53.946452" elapsed="5.001304"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:35:53.918786" elapsed="5.029210"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:01.212924" elapsed="3.563462"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:01.211854" elapsed="3.564882"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:32:44.894124" elapsed="19.883985"/>
+</test>
+<test id="s1-t3" name=" Fill without entering title in the shrine" line="29">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:04.780050" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T19:33:04.779712" elapsed="5.698663"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:10.479037" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T19:33:10.478677" elapsed="2.447076"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T19:33:12.925972" elapsed="0.284899"/>
+=======
 <status status="PASS" start="2025-05-29T16:35:58.949325" elapsed="2.182357"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:35:58.948971" elapsed="2.182832"/>
@@ -2781,10 +3006,76 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T16:36:04.237004" elapsed="0.030087"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:13.211089" elapsed="0.003686"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:04.779422" elapsed="8.435519"/>
+</kw>
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:13.216004" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:13.215794" elapsed="0.161250"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:13.377539" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T19:33:13.388818" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:13.377252" elapsed="0.061386"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:13.439000" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:13.438797" elapsed="0.271116"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:13.215512" elapsed="0.494611"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:13.712845" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:13.711987" elapsed="3.689146"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:13.711416" elapsed="3.690186"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:17.403837" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:17.403082" elapsed="0.267742"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:17.402469" elapsed="0.268613"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:17.672878" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:17.672446" elapsed="0.292264"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:17.671815" elapsed="0.293221"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:17.968183" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:17.967686" elapsed="0.561594"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:17.966947" elapsed="0.562798"/>
+=======
 <status status="PASS" start="2025-05-29T16:36:04.267283" elapsed="0.006437"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:36:01.133367" elapsed="3.140473"/>
@@ -2935,10 +3226,36 @@
 <status status="PASS" start="2025-05-29T16:36:43.777287" elapsed="5.001112"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:36:43.751948" elapsed="5.026594"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:18.535066" elapsed="3.396177"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:18.534368" elapsed="3.397013"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:04.778908" elapsed="17.152719"/>
+</test>
+<test id="s1-t4" name=" Search and Assert the title in the shine panel" line="36">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:21.934911" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T19:33:21.934553" elapsed="5.583308"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:27.518353" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T19:33:27.518088" elapsed="2.735759"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T19:33:30.254017" elapsed="0.275076"/>
+=======
 <status status="PASS" start="2025-05-29T16:36:48.779412" elapsed="2.176434"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:36:48.779090" elapsed="2.176977"/>
@@ -2962,10 +3279,93 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T16:36:53.925164" elapsed="0.039346"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:30.529383" elapsed="0.005768"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:21.933950" elapsed="8.601443"/>
+</kw>
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:30.537062" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:30.536823" elapsed="0.165775"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:30.702954" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T19:33:30.707466" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:30.702757" elapsed="0.055931"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:30.759004" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:30.758845" elapsed="0.250739"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:30.536233" elapsed="0.473485"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:31.011780" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:31.011420" elapsed="3.701839"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:31.010982" elapsed="3.702590"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:34.716797" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:34.716409" elapsed="0.269796"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:34.715310" elapsed="0.271243"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:34.988565" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:34.988005" elapsed="0.284428"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:34.987319" elapsed="0.285432"/>
+</kw>
+<kw name="Send input to the search box" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:35.280866" level="INFO">Clicking element 'xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div'.</msg>
+<arg>xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:35.280552" elapsed="0.620093"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:35.901598" level="INFO">Sending key(s) ('Testing',) to xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div element.</msg>
+<msg time="2025-05-29T19:33:36.188900" level="INFO">Sending keys Testing</msg>
+<arg>xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div</arg>
+<arg>Testing</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-29T19:33:35.901018" elapsed="0.531239"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:35.280033" elapsed="1.152449"/>
+</kw>
+<kw name="Verify the title in the shine panel" owner="ShineResource">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:36.441036" level="INFO">Current page contains text 'Testing'.</msg>
+<arg>Testing</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-29T19:33:36.433742" elapsed="0.007430"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:36.433224" elapsed="0.008143"/>
+=======
 <status status="PASS" start="2025-05-29T16:36:53.964705" elapsed="0.007075"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:36:50.957625" elapsed="3.014332"/>
@@ -5699,10 +6099,36 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFC4FB2259D+29]
 	RtlUserThreadStart [0x00007FFC519AAF78+40]
 </status>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:36.442085" elapsed="3.208795"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:36.441770" elapsed="3.209346"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:21.932919" elapsed="17.718517"/>
+</test>
+<test id="s1-t5" name="Edit and assert the title in the shrine page and delete" line="48">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:39.654574" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T19:33:39.654253" elapsed="5.850622"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:45.505285" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T19:33:45.505082" elapsed="2.678920"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T19:33:48.184282" elapsed="0.278679"/>
+=======
 <status status="PASS" start="2025-05-29T16:42:27.459581" elapsed="2.218481"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:42:27.459090" elapsed="2.219154"/>
@@ -5751,13 +6177,20 @@ Stacktrace:
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T16:42:32.881959" elapsed="0.034520"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:48.463186" elapsed="0.004149"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:39.653754" elapsed="8.813741"/>
+=======
 <status status="PASS" start="2025-05-29T16:42:32.916666" elapsed="0.005151"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:42:29.680982" elapsed="3.241018"/>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Crud operation in Vission and Mission">
 <if>
@@ -5800,6 +6233,100 @@ Stacktrace:
 <branch type="ELSE IF" condition="'${descriptiontext}'==&quot;IronMan&quot;">
 <kw name="Fill the valid Login Credentials" owner="GenericResources">
 <kw name="Input Text" owner="SeleniumLibrary">
+<<<<<<< HEAD
+<msg time="2025-05-29T19:33:48.468547" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:48.468393" elapsed="0.173184"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:48.642066" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T19:33:48.648921" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:48.641780" elapsed="0.135310"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:48.777457" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:48.777260" elapsed="0.290161"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:48.468172" elapsed="0.599483"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:49.069566" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:49.069020" elapsed="3.371547"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:49.068311" elapsed="3.372468"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:52.442293" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:52.441927" elapsed="0.260325"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:52.441348" elapsed="0.261134"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:52.704082" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:52.703737" elapsed="0.292589"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:52.703239" elapsed="0.293241"/>
+</kw>
+<kw name="Click edit title in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:52.998181" level="INFO">Clicking element 'xpath://*[@id="root"]/div[1]/main/div[2]/div[2]/div/table/tbody/tr[2]/td[5]/div/button[1]'.</msg>
+<arg>${edit_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:52.997757" elapsed="0.817046"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:52.997297" elapsed="0.817745"/>
+</kw>
+<kw name="Send input to the title edit element" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:54.023045" level="INFO">Clicking element 'xpath://input[@class="MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq"]'.</msg>
+<arg>${edit_title}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:54.022550" elapsed="0.406048"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:54.430606" level="INFO">Sending key(s) ('s',) to xpath://input[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq'] element.</msg>
+<msg time="2025-05-29T19:33:54.732611" level="INFO">Sending key s</msg>
+<arg>${add_title}</arg>
+<arg>s</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-29T19:33:54.429092" elapsed="0.343682"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:54.021789" elapsed="0.751352"/>
+</kw>
+<kw name="Click the update shrine button" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:54.774768" level="INFO">Clicking element 'xpath://button[text()='Update Shine']'.</msg>
+<arg>${update_shine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T19:33:54.774513" elapsed="0.318972"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:54.774015" elapsed="0.319646"/>
+</kw>
+<kw name="Assert the edit title heading" owner="ShineResource">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-29T19:33:57.912517" level="INFO">Current page contains text 'Testings'.</msg>
+<arg>Testings</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-29T19:33:55.095077" elapsed="2.817892"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:55.094328" elapsed="2.818768"/>
+=======
 <msg time="2025-05-29T16:42:32.924977" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
 <arg>xpath://input[@id='signin-email']</arg>
 <arg>${valid_username}</arg>
@@ -6055,10 +6582,25 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFC4FB2259D+29]
 	RtlUserThreadStart [0x00007FFC519AAF78+40]
 </status>
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T19:33:58.000810" elapsed="3.200662"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:58.000040" elapsed="3.201657"/>
+</kw>
+<status status="PASS" start="2025-05-29T19:33:39.652471" elapsed="21.549557"/>
+</test>
+<doc>Product page tests</doc>
+<status status="PASS" start="2025-05-29T19:32:27.020873" elapsed="94.183872"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+=======
 <status status="PASS" start="2025-05-29T16:42:37.322591" elapsed="2.242082"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:42:37.321980" elapsed="2.242882"/>
@@ -6099,6 +6641,7 @@ Stacktrace:
 <total>
 <stat pass="24" fail="10" skip="0">All Tests</stat>
 >>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </total>
 <tag>
 <stat pass="0" fail="1" skip="0">clear</stat>
@@ -6107,6 +6650,9 @@ Stacktrace:
 <stat pass="0" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
+<<<<<<< HEAD
+<stat name="shineTest" id="s1" pass="5" fail="0" skip="0">shineTest</stat>
+=======
 <<<<<<< HEAD
 <stat name="Vission Mission Excel" id="s1" pass="0" fail="1" skip="0">Vission Mission Excel</stat>
 =======
@@ -6120,6 +6666,7 @@ Stacktrace:
 <stat name="Vision Mission" id="s1-s7" pass="2" fail="1" skip="0">Tests.Vision Mission</stat>
 <stat name="Vission Mission Excel" id="s1-s8" pass="0" fail="4" skip="0">Tests.Vission Mission Excel</stat>
 >>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
+>>>>>>> 96e56ffc8e3485835308a07735569bafab2da7ad
 </suite>
 </statistics>
 <errors>
