@@ -5,6 +5,7 @@ Test Setup    Open the browser with URL
 Test Teardown    Close browser session
 Resource    ../Resources/GenericResources.robot
 Resource    ../Resources/AboutUsResource.robot
+Library    DataDriver    file=../Utilities/LoginCredentials.xlsx    sheet_name=Sheet1
 
 *** Test Cases ***
 Validate about us landing page
