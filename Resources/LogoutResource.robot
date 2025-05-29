@@ -27,3 +27,5 @@ Logout From Current Session
     IF    not ${logout_success}
         Fail    Logout failed after ${MAX_RETRIES} retries
     END
+
+    

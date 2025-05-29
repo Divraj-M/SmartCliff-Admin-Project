@@ -14,6 +14,8 @@ ${password}
 
 *** Test Cases ***
 Validate Login with    ${email}    ${password}
+    [Tags]    Regression
+
 
 *** Keywords ***
 Validate Login in SmartCliff
