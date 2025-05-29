@@ -1,0 +1,20 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Vision Mission :: Tests to vision&Mission                               
+==============================================================================
+Verify the user is successfully entered in vision and Mission page    | PASS |
+------------------------------------------------------------------------------
+Verify the Back buttion in Mission and Vission                        | PASS |
+------------------------------------------------------------------------------
+Verify the Vision is added in the table                               | PASS |
+------------------------------------------------------------------------------
+Verify the search button in vision and Mission                        | PASS |
+------------------------------------------------------------------------------
+Tests.Vision Mission :: Tests to vision&Mission                       | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\pabot_results\3\output.xml
