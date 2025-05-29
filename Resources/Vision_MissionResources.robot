@@ -100,6 +100,12 @@ add the content in the vission
     Click Element    ${add_content}
     Wait Until Element Is Visible    ${addvisionandmission}
     
+add the content
+    Click Element    ${add_content}
+
+Application error
+    Element Text Should Be    xpath://h2    Unexpected Application Error!
+
 
 add the text to edit in vission
     [Arguments]    ${descriptiontext}
