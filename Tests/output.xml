@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T21:18:05.921222" rpa="false" schemaversion="5">
+<suite id="s1" name="Vission Mission Excel" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vission_Mission_Excel.robot">
+<test id="s1-t1" name="Verify the Vision and Mission" line="16">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:06.788964" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-29T21:18:06.788780" elapsed="1.292344"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:08.081526" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-29T21:18:08.081347" elapsed="0.971003"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-29T21:18:09.052544" elapsed="0.053389"/>
+=======
 <robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T16:31:14.630856" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\SmartCliff-Admin-Project\Tests">
 <suite id="s1-s1" name="AboutUs Test" source="C:\SmartCliff-Admin-Project\Tests\AboutUs_Test.robot">
@@ -19,16 +40,314 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-29T16:31:19.207639" elapsed="0.032481"/>
+>>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T21:18:09.106165" elapsed="0.001267"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:06.788106" elapsed="2.319427"/>
+=======
 <status status="PASS" start="2025-05-29T16:31:19.240297" elapsed="0.001379"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:31:15.008314" elapsed="4.233557"/>
+>>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
 </kw>
+<kw name="Crud operation in Vission and Mission">
+<if>
+<branch type="IF" condition="'${descriptiontext}'==&quot;Welcome to the smartcliff&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.108619" elapsed="0.000032"/>
+</kw>
+<kw name="Verify Vision Added" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.108784" elapsed="0.000025"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T21:18:09.108350" elapsed="0.000492"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;Welcome to the Kiot&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.109065" elapsed="0.000025"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.109185" elapsed="0.000023"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.109294" elapsed="0.000024"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.109401" elapsed="0.000022"/>
+</kw>
+<kw name="click the Mission in the dropdown" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.109514" elapsed="0.000022"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.109618" elapsed="0.000023"/>
+</kw>
+<kw name="click the add content" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.109741" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T21:18:09.108881" elapsed="0.000912"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;IronMan&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.109989" elapsed="0.000023"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.110099" elapsed="0.000023"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.110204" elapsed="0.000022"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.110306" elapsed="0.000021"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.110404" elapsed="0.000023"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.110511" elapsed="0.000021"/>
+</kw>
+<kw name="click the search bar and enter the description" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.110609" elapsed="0.000022"/>
+</kw>
+<kw name="Verify the search bar" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.110714" elapsed="0.000022"/>
+</kw>
+<kw name="Delete the description from the table" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.110830" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T21:18:09.109826" elapsed="0.001056"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;Batman&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.111090" elapsed="0.000030"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.111218" elapsed="0.000024"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.111327" elapsed="0.000024"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.111433" elapsed="0.000022"/>
+</kw>
+<kw name="click the Mission in the dropdown" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.111541" elapsed="0.000022"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.111639" elapsed="0.000020"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.111748" elapsed="0.000021"/>
+</kw>
+<kw name="add the text to edit in vission" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.111901" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T21:18:09.110913" elapsed="0.001040"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;Hulk&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.112138" elapsed="0.000022"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.112244" elapsed="0.000021"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.112342" elapsed="0.000023"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.112443" elapsed="0.000020"/>
+</kw>
+<kw name="click the Mission in the dropdown" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.112545" elapsed="0.000020"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.112659" elapsed="0.000025"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:09.112769" elapsed="0.000021"/>
+</kw>
+<kw name="Delete the description from the table as confirm" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.113026" elapsed="0.000028"/>
+</kw>
+<kw name="Delete the description from the table" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:09.113152" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2025-05-29T21:18:09.111984" elapsed="0.001219"/>
+</branch>
+<branch type="ELSE IF" condition="'${descriptiontext}'==&quot;Success&quot;">
 <kw name="Fill the valid Login Credentials" owner="GenericResources">
 <kw name="Input Text" owner="SeleniumLibrary">
+<<<<<<< HEAD
+<msg time="2025-05-29T21:18:09.113986" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:09.113642" elapsed="0.321317"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:09.435400" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-29T21:18:09.464034" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:09.435153" elapsed="0.134255"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:09.569770" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:09.569591" elapsed="0.114473"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:09.113422" elapsed="0.570887"/>
+</kw>
+<kw name="Click the about in the menu list" owner="Vision_MissionResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MenuButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T21:18:09.685042" elapsed="4.191868"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:13.877478" level="INFO">Clicking element 'xpath://button[contains(@class,'MuiIconButton-root')]'.</msg>
+<arg>${MenuButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:13.877135" elapsed="0.086526"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AboutinMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T21:18:13.963956" elapsed="0.035579"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:14.000115" level="INFO">Clicking element 'xpath://span[contains(text(),'About')]'.</msg>
+<arg>${AboutinMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:13.999779" elapsed="0.122770"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:09.684612" elapsed="4.438119"/>
+</kw>
+<kw name="click the vision&amp;Mission in the list" owner="Vision_MissionResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Vision&amp;Mission}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T21:18:14.124069" elapsed="0.258681"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:14.383731" level="INFO">Clicking element 'xpath://span[contains(text(),'Vision &amp; Mission')]'.</msg>
+<arg>${Vision&amp;Mission}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:14.383276" elapsed="0.134862"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:14.123045" elapsed="0.395274"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${addvisionandmission}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T21:18:14.519279" elapsed="0.946576"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:15.466505" level="INFO">Clicking button 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button'.</msg>
+<arg>${addvisionandmission}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:15.466209" elapsed="0.171671"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:14.518824" elapsed="1.119363"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:15.639210" level="INFO">Typing text 'Success' into text field 'xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398' and @name='description']'.</msg>
+<arg>${description}</arg>
+<arg>${descriptiontext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:15.638936" elapsed="0.225095"/>
+</kw>
+<arg>${descriptiontext}</arg>
+<status status="PASS" start="2025-05-29T21:18:15.638463" elapsed="0.225686"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:15.864758" level="INFO">Clicking element 'xpath://button[contains(text(),'Add Content')]'.</msg>
+<arg>${add_content}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:15.864593" elapsed="0.128462"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${addvisionandmission}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T21:18:15.993243" elapsed="3.466124"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:15.864333" elapsed="3.595327"/>
+</kw>
+<kw name="click the add vision and Mission" owner="Vision_MissionResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${addvisionandmission}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-29T21:18:19.460810" elapsed="0.031926"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:19.493568" level="INFO">Clicking button 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button'.</msg>
+<arg>${addvisionandmission}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:19.493112" elapsed="0.178886"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:19.460105" elapsed="0.212076"/>
+</kw>
+<kw name="add the Description in the textarea" owner="Vision_MissionResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:19.673230" level="INFO">Typing text 'Success' into text field 'xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398' and @name='description']'.</msg>
+<arg>${description}</arg>
+<arg>${descriptiontext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:19.672932" elapsed="0.158054"/>
+</kw>
+<arg>${descriptiontext}</arg>
+<status status="PASS" start="2025-05-29T21:18:19.672440" elapsed="0.158794"/>
+</kw>
+<kw name="add the content in the vission" owner="Vision_MissionResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:19.832449" level="INFO">Clicking element 'xpath://button[contains(text(),'Add Content')]'.</msg>
+<arg>${add_content}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-29T21:18:19.832183" elapsed="0.125583"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-29T21:18:30.316685" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-29T21:18:30.317050" level="FAIL">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</msg>
+<arg>${addvisionandmission}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-29T21:18:19.958399" elapsed="10.363976">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-05-29T21:18:19.831626" elapsed="10.491148">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</status>
+</kw>
+<kw name="Application error" owner="Vision_MissionResources">
+<status status="NOT RUN" start="2025-05-29T21:18:30.323267" elapsed="0.000094"/>
+</kw>
+<kw name="Delete the description from the table" owner="Vision_MissionResources">
+<arg>${descriptiontext}</arg>
+<status status="NOT RUN" start="2025-05-29T21:18:30.323697" elapsed="0.000083"/>
+</kw>
+<status status="FAIL" start="2025-05-29T21:18:09.113235" elapsed="21.210687">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</status>
+</branch>
+<status status="FAIL" start="2025-05-29T21:18:09.108320" elapsed="21.215726">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</status>
+</if>
+<arg>descriptiontext=Success</arg>
+<status status="FAIL" start="2025-05-29T21:18:09.108087" elapsed="21.216221">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</status>
+=======
 <msg time="2025-05-29T16:31:19.243028" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
 <arg>xpath://input[@id='signin-email']</arg>
 <arg>${valid_username}</arg>
@@ -86,10 +405,25 @@
 <status status="PASS" start="2025-05-29T16:31:23.575579" elapsed="1.168044"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:31:23.575341" elapsed="1.168426"/>
+>>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-29T21:18:30.326072" elapsed="2.216035"/>
+</kw>
+<status status="PASS" start="2025-05-29T21:18:30.325402" elapsed="2.217058"/>
+</kw>
+<status status="FAIL" start="2025-05-29T21:18:06.786310" elapsed="25.756716">Element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button' not visible after 5 seconds.</status>
+</test>
+<doc>Tests for Vision &amp; Mission functionality</doc>
+<status status="FAIL" start="2025-05-29T21:18:05.922708" elapsed="26.624457"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+=======
 <status status="PASS" start="2025-05-29T16:31:24.744467" elapsed="2.206273"/>
 </kw>
 <status status="PASS" start="2025-05-29T16:31:24.744236" elapsed="2.206769"/>
@@ -5764,6 +6098,7 @@ Stacktrace:
 <statistics>
 <total>
 <stat pass="24" fail="10" skip="0">All Tests</stat>
+>>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
 </total>
 <tag>
 <stat pass="0" fail="1" skip="0">clear</stat>
@@ -5772,6 +6107,9 @@ Stacktrace:
 <stat pass="0" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
+<<<<<<< HEAD
+<stat name="Vission Mission Excel" id="s1" pass="0" fail="1" skip="0">Vission Mission Excel</stat>
+=======
 <stat name="Tests" id="s1" pass="24" fail="10" skip="0">Tests</stat>
 <stat name="AboutUs Test" id="s1-s1" pass="3" fail="0" skip="0">Tests.AboutUs Test</stat>
 <stat name="AboutUs Test Excel" id="s1-s2" pass="4" fail="0" skip="0">Tests.AboutUs Test Excel</stat>
@@ -5781,6 +6119,7 @@ Stacktrace:
 <stat name="ShineTest" id="s1-s6" pass="10" fail="0" skip="0">Tests.ShineTest</stat>
 <stat name="Vision Mission" id="s1-s7" pass="2" fail="1" skip="0">Tests.Vision Mission</stat>
 <stat name="Vission Mission Excel" id="s1-s8" pass="0" fail="4" skip="0">Tests.Vission Mission Excel</stat>
+>>>>>>> 1566e07d620a38087ec41e0673e9f459cbc57b7a
 </suite>
 </statistics>
 <errors>
