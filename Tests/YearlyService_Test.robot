@@ -51,10 +51,36 @@ validate invalid search in yearly service panel
     ${search_keyword}=    Set Variable    hello
     Input Text    ${search_box_yearly_Serv}    ${search_keyword}
     rows should not be displayed
-    
+
+# validate working of pagination arrow in yearly service panel
+#     [Tags]    Regression
+#     Fill the valid Login Credentials
+#     click yearly service in side menu
+
+#     # Count number of rows on first page
+#     ${rows_page_1}=    Get Element Count    ${yearly_serv_table_rows}
+#     Log To Console    Rows on first page: ${rows_page_1}
+
+#     # Click pagination arrow to go to next page
+#     click side right arrow
+#     Sleep    2s
+
+#     # Count number of rows on second page
+#     ${rows_page_2}=    Get Element Count    ${yearly_serv_table_rows}
+#     Log To Console    Rows on second page: ${rows_page_2}
+
+#     # Assert rows are different (pagination worked)
+#     Should Not Be Equal As Integers    ${rows_page_1}    ${rows_page_2}
+
 validate working of pagination arrow in yearly service panel
     [Tags]    Regression
     Fill the valid Login Credentials
     click yearly service in side menu
+    @{list1}=    retrive all row from table
     click side right arrow
+    Sleep    1s
+    @{list2}=    retrive all row from table
+    Should Not Be Equal    @{list1}    @{list2}
+
+
     

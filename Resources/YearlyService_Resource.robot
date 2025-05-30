@@ -68,4 +68,13 @@ click side right arrow
     Click Element    ${yearly_service_page_arrow_right}
  
  
-    
+retrive all row from table
+    @{rows_page_elements}=    Get WebElements    ${yearly_serv_table_rows}
+    @{rows_page}=    Create List
+    FOR    ${row}    IN    @{rows_page_elements}
+        ${text}=    Get Text    ${row}
+        Log To Console    ${text}
+        Append To List    ${rows_page}    ${text}
+    END
+    Log Many    @{rows_page}
+    RETURN    @{rows_page}
