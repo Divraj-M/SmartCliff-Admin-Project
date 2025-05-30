@@ -82,13 +82,13 @@ Add row with same title
 edit title in the about us panel
     [Arguments]    ${content_text}    ${new_title}
     Fill the valid Login Credentials
-    # click about us in side menu
-    # click add about us button
-    # fill add about us form    ${content_text}
-    # click edit button    ${content_text}
-    # change text in the title    ${new_title}
-    # update the content in edit form
-    # the user should see updated title    ${new_title}
+    click about us in side menu
+    click add about us button
+    fill add about us form    ${content_text}
+    click edit button    ${content_text}
+    change text in the title    ${new_title}
+    update the content in edit form
+    the user should see updated title    ${new_title}
     # delete the new row in about us panel    ${new_title}
     # the specified row should be removed in about us panel    ${new_title}
 

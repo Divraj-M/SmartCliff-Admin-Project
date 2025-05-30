@@ -81,7 +81,7 @@ User should see the AboutUs control panel
     Page Should Contain    About Us Content Panel
     
 Extract Titles From Table
-   
+
     # ${title_column}=    Set Variable    xpath://*[@id="root"]/div[1]/main/div[2]/div[2]/table/tbody/tr/td[1]
     Wait Until Element Is Visible    ${title_column}    timeout=10s
     ${title_cells}=    Get WebElements    ${title_column}
