@@ -13,7 +13,7 @@ ${description}    xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-i
 ${add_content}              xpath://button[contains(text(),'Add Content')]
 ${deletebtn}                xpath://button[contains(@class,'MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1ecefdc')]
 ${searchbtn}                xpath://input[contains(@class,'MuiInputBase-input')]
-${missiondropdown}    xpath://div[@class='MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-qiwgdb']
+${missiondropdown}    xpath://*[@id=":rm:"]
 ${Mission}    xpath://li[@class='MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1km1ehz']
 ${submitcontent}    xpath://button[contains(text(),'Submit Content')]
 ${Avengers}    Avengers
