@@ -56,23 +56,15 @@ validate invalid search in yearly service panel
 #     [Tags]    Regression
 #     Fill the valid Login Credentials
 #     click yearly service in side menu
-
-#     # Count number of rows on first page
 #     ${rows_page_1}=    Get Element Count    ${yearly_serv_table_rows}
 #     Log To Console    Rows on first page: ${rows_page_1}
-
-#     # Click pagination arrow to go to next page
 #     click side right arrow
 #     Sleep    2s
-
-#     # Count number of rows on second page
 #     ${rows_page_2}=    Get Element Count    ${yearly_serv_table_rows}
 #     Log To Console    Rows on second page: ${rows_page_2}
-
-#     # Assert rows are different (pagination worked)
 #     Should Not Be Equal As Integers    ${rows_page_1}    ${rows_page_2}
 
-validate working of pagination arrow in yearly service panel
+validate working of pagination right arrow in yearly service panel
     [Tags]    Regression
     Fill the valid Login Credentials
     click yearly service in side menu
@@ -81,6 +73,30 @@ validate working of pagination arrow in yearly service panel
     Sleep    1s
     @{list2}=    retrive all row from table
     Should Not Be Equal    @{list1}    @{list2}
+
+validate working of pagination left arrow in yearly service panel
+    [Tags]    Regression
+    Fill the valid Login Credentials
+    click yearly service in side menu
+    @{list1}=    retrive all row from table
+    click side right arrow
+    click side left arrow
+    Sleep    1s
+    @{list2}=    retrive all row from table
+    Should Be Equal    ${list1}    ${list2}
+
+# validate pageination is dropdown is working
+#     [Tags]    Regression
+#     Fill the valid Login Credentials
+#     click yearly service in side menu
+#     ${rows_page_1}=    Get Element Count    ${yearly_serv_table_rows}
+#     Log To Console    Rows on first page: ${rows_page_1}
+#     click side right arrow
+#     Sleep    2s
+#     ${rows_page_2}=    Get Element Count    ${yearly_serv_table_rows}
+#     Log To Console    Rows on second page: ${rows_page_2}
+#     Should Not Be Equal As Integers    ${rows_page_1}    ${rows_page_2}
+
 
 
     

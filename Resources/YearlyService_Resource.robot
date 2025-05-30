@@ -12,7 +12,7 @@ ${columns_yearly_serv}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[1]
 ${columns_yearly__business_serv}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[1]/table/tbody//tr//td[2]
 ${yearly_service_page_arrow_right}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[2]/div/div[3]/button[2]
 ${yearly_serv_table_rows}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[1]/table/tbody//tr
-
+${yearly_service_page_arrow_left}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[2]/div/div[3]/button[1]
 *** Keywords ***
 click yearly service in side menu
     Wait Until Element Is Visible    ${about_icon}    timeout=10s
@@ -67,6 +67,9 @@ click side right arrow
     Wait Until Element Is Visible    ${yearly_service_page_arrow_right}
     Click Element    ${yearly_service_page_arrow_right}
  
+click side left arrow
+     Wait Until Element Is Visible    ${yearly_service_page_arrow_left}
+    Click Element    ${yearly_service_page_arrow_left}
  
 retrive all row from table
     @{rows_page_elements}=    Get WebElements    ${yearly_serv_table_rows}
@@ -77,4 +80,4 @@ retrive all row from table
         Append To List    ${rows_page}    ${text}
     END
     Log Many    @{rows_page}
-    RETURN    @{rows_page}
+    RETURN    ${rows_page}
