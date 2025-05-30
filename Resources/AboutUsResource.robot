@@ -17,6 +17,9 @@ ${IMAGE_PATH}    ${CURDIR}${/}about_us_images${/}Sunlit Park Walk.jpg
 ${del_again}    xpath:/html/body/div[2]/div[3]/div/div[2]/button[2]
 ${search_box}    xpath://div[contains(@id,'root')]/div[1]/main/div[2]/div[1]/div[1]/div/div//input
 ${title_column}    xpath://div[contains(@id,'root')]/div[1]/main/div[2]/div[2]/table/tbody//tr//td[1]
+${remove_image}    xpath://*[@id="root"]/div[1]/main/main/div/form/div[3]/button
+${edit_title_field}    xpath://*[@id="root"]/div[1]/main/div[2]/div[2]/div/form/div/div[1]/div/div//textarea   
+${update_changes_btn}    xpath://*[@id="root"]/div[1]/main/div[2]/div[2]/div/form/div/div[4]/button
 
 *** Keywords ***
 click about us in side menu
@@ -25,6 +28,14 @@ click about us in side menu
     Wait Until Element Is Visible    ${about_us}    timeout=10s
     Click Element    ${about_us}
     
+    
+fill add about us form without image
+     [Arguments]    ${content_text}
+    # Wait Until Element Is Not Visible    ${toast}    timeout=15s
+    Wait Until Element Is Enabled    ${content_title_input}
+    Input Text    ${content_title_input}    ${content_text}
+    Click Button    ${submit_content}
+
 fill add about us form
     [Arguments]    ${content_text}
     # Wait Until Element Is Not Visible    ${toast}    timeout=15s
@@ -70,7 +81,7 @@ User should see the AboutUs control panel
     Page Should Contain    About Us Content Panel
     
 Extract Titles From Table
-   
+
     # ${title_column}=    Set Variable    xpath://*[@id="root"]/div[1]/main/div[2]/div[2]/table/tbody/tr/td[1]
     Wait Until Element Is Visible    ${title_column}    timeout=10s
     ${title_cells}=    Get WebElements    ${title_column}
@@ -98,6 +109,52 @@ Validate Search Results
         Should Contain    ${title.lower()}    ${search_term.lower()}    msg=Title '${title}' doesn't contain search term '${search_term}'
     END
 
-
-User should see title waring warning
+User should see image warning
+    Page Should Contain    Image is required
+User should see title warning
      Page Should Contain    Title is required
+
+fill the form and remove image from form
+    [Arguments]    ${content_text}
+    # Wait Until Element Is Not Visible    ${toast}    timeout=15s
+    Wait Until Element Is Enabled    ${content_title_input}
+    Input Text    ${content_title_input}    ${content_text}
+   
+    Wait Until Element Is Visible    ${DROPZONE_AREA}
+    Wait Until Element Is Enabled    ${DROPZONE_AREA}
+    
+    Click Element    ${DROPZONE_AREA}
+    Sleep    1s  
+    ${file_input}=    Set Variable    css:input[type="file"][accept="image/*"]
+    
+   
+    Choose File    ${file_input}    ${IMAGE_PATH}
+    Click Button    ${remove_image}
+
+the photo should be removed
+    Page Should Not Contain Image    //*[@id="root"]/div[1]/main/main/div/form/div[3]/img
+
+Error alert sould be displayed
+    # ${alert_txt}=    Handle Alert
+    Alert Should Be Present
+    # Log To Console    ${alert_txt}
+    # Log    ${alert_txt}
+
+click edit button
+    [Arguments]    ${content_text}
+    Click Element    xpath=//td[contains(text(),'${content_text}')]//following-sibling::td//button[1]
+    Sleep    1s
+
+change text in the title    
+    [Arguments]    ${new_title}
+    Press Key    ${edit_title_field}    backspace
+    Input Text     ${edit_title_field}    ${new_title}
+
+update the content in edit form
+    Click Element    ${update_changes_btn}
+
+the user should see updated title
+    [Arguments]    ${new_title}
+    Page Should Contain    ${new_title}
+
+
