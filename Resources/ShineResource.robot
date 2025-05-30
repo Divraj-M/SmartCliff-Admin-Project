@@ -24,20 +24,23 @@ ${edit_title}    xpath://input[@class="MuiInputBase-input MuiOutlinedInput-input
 ${update_shine}    xpath://button[text()='Update Shine']
 ${title_check}    xpath://p[@text()='Testings']
 ${add_defintions}    xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-11pdzw']    
-${add_def_title}    xpath:/html/body/div/div[1]/main/main/div/form/div[3]/div/div[2]/div[1]/div/input
-${add_def_description}    xpath:/html/body/div/div[1]/main/main/div/form/div[3]/div/div[2]/div[2]/div/textarea[1]
+${add_def_title}    xpath://h6[@class='MuiTypography-root MuiTypography-h6 css-1anx036']//parent::div//parent::div//following-sibling::div//child::div[1]//div[1]//input
+${add_def_description}    xpath://h6[@class='MuiTypography-root MuiTypography-h6 css-1anx036']//parent::div//parent::div//following-sibling::div//child::div[2]//div[1]//child::textarea[1]
 ${delete_addshine}    xpath://div[@id="root"]/div[1]/main/div[2]/div[2]/div/table/tbody/tr[7]/td[5]/div/button[2]
 ${delete_alert}    xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1ecefdc']
 ${add_def_desletebutton}    xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorError MuiIconButton-sizeMedium css-1oh31is']
 *** Keywords ***
 Click the menu in the home page 
+    Wait Until Element Is Visible    ${app_bar}
     Click Element     ${app_bar}
     
 
 Click the about in the Menubar
+    Wait Until Element Is Visible    ${about_element}
     Click Element    ${about_element}
     
 Click the shrine element in the about 
+    Wait Until Element Is Visible    ${shrine_element}
     Click Element    ${shrine_element}
     
 Click the add shrine in the shrine page
@@ -51,6 +54,7 @@ Verify agin it redirected into shine page
 
 Send input to the title in the shine page
     [Arguments]    ${title}
+
     Input Text    ${add_title}    ${title}
     
 Send input to the description in the shine page

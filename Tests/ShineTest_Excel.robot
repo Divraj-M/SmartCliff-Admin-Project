@@ -13,8 +13,10 @@ ${description}
 
 *** Test Cases ***
 Verify the Shine
+    [Tags]    regression
     [Template]    Crud operation in Shine
-    ${title}	${description}
+    ${title}    ${description}
+
 
 *** Keywords ***
 Crud operation in Shine
