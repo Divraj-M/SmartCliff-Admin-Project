@@ -10,6 +10,9 @@ ${back_button}    xpath://div[contains(@id,'root')]/div[1]/main/main/div/div/but
 ${search_box_yearly_Serv}    xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[1]/div/div//input
 ${columns_yearly_serv}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[1]/table/tbody//tr//td[1]
 ${columns_yearly__business_serv}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[1]/table/tbody//tr//td[2]
+${yearly_service_page_arrow_right}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[2]/div/div[3]/button[2]
+${yearly_serv_table_rows}    xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[1]/table/tbody//tr
+
 *** Keywords ***
 click yearly service in side menu
     Wait Until Element Is Visible    ${about_icon}    timeout=10s
@@ -56,3 +59,13 @@ Validate Search in yearly servic Results
         Log To Console    ${title}
         Should Contain    ${title.lower()}    ${search_term.lower()}    msg=Title '${title}' doesn't contain search term '${search_term}'
     END
+
+rows should not be displayed
+    Page Should Not Contain Element    ${yearly_serv_table_rows}   
+
+click side right arrow
+    Wait Until Element Is Visible    ${yearly_service_page_arrow_right}
+    Click Element    ${yearly_service_page_arrow_right}
+ 
+ 
+    
