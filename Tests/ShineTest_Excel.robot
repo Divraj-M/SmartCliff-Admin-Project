@@ -13,9 +13,14 @@ ${description}
 
 *** Test Cases ***
 Verify the Shine
+<<<<<<< HEAD
+    [Tags]    regression
+=======
     [Tags]    Regression
+>>>>>>> 40846f396ee5ce04f4c8584026ab27209a4b5d63
     [Template]    Crud operation in Shine
-    ${title}	${description}
+    ${title}    ${description}
+
 
 *** Keywords ***
 Crud operation in Shine

@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-30T16:16:58.736035" rpa="false" schemaversion="5">
+<suite id="s1" name="shineTest Excel" source="C:\Users\drcha\Desktop\Smart_cliif_Project\SmartCliff-Admin-Project\Tests\shineTest_Excel.robot">
+<test id="s1-t1" name="Verify the Shine" line="15">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:16:59.615207" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-30T16:16:59.615048" elapsed="1.448571"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:01.064404" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-30T16:17:01.064033" elapsed="2.138482"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-30T16:17:03.202732" elapsed="0.045811"/>
+=======
+<<<<<<< HEAD
 <robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-30T16:20:20.850980" rpa="false" schemaversion="5">
 <suite id="s1" name="Vision Mission" source="C:\Users\Lenovo\Desktop\SmartCliff-Admin\Tests\Vision_Mission.robot">
 <test id="s1-t1" name="Verify the user is successfully entered in Vision and Mission page" line="11">
@@ -40,10 +61,278 @@
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-30T15:52:43.378368" elapsed="0.071786"/>
 >>>>>>> d2ed41d7e67158440e6b2d392fbad77c2039438e
+>>>>>>> 40846f396ee5ce04f4c8584026ab27209a4b5d63
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-30T16:17:03.248745" elapsed="0.000892"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:16:59.614369" elapsed="3.635880"/>
+</kw>
+<kw name="Crud operation in Shine">
+<if>
+<branch type="IF" condition="'${title}'==&quot;Testing&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:03.251914" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:03.251631" elapsed="0.247666"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:03.499950" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-30T16:17:03.531608" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:03.499571" elapsed="0.142824"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:03.642715" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:03.642561" elapsed="0.080152"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:03.251432" elapsed="0.471478"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_bar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:03.723584" elapsed="3.861358"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:07.585412" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:07.585156" elapsed="0.059478"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:03.723210" elapsed="3.921592"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${about_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:07.645435" elapsed="0.021340"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:07.667255" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:07.667025" elapsed="0.109760"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:07.645094" elapsed="0.131831"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${shrine_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:07.777470" elapsed="0.263266"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:08.041531" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:08.041078" elapsed="0.212316"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:07.777134" elapsed="0.476402"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:08.254287" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:08.254071" elapsed="0.740918"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:08.253740" elapsed="0.741371"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:08.995760" level="INFO">Typing text 'Testing' into text field 'xpath://input[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq']'.</msg>
+<arg>${add_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:08.995544" elapsed="0.269384"/>
+</kw>
+<arg>${title}</arg>
+<status status="PASS" start="2025-05-30T16:17:08.995272" elapsed="0.270208"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:09.267388" level="INFO">Typing text 'Testing is important step in SDLC.' into text field 'xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398'][1]'.</msg>
+<arg>${text_area}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:09.266628" elapsed="0.989442"/>
+</kw>
+<arg>${description}</arg>
+<status status="PASS" start="2025-05-30T16:17:09.266018" elapsed="0.990152"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:10.256659" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-h6pgjh']'.</msg>
+<arg>${submit_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:10.256523" elapsed="0.125868"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:10.256327" elapsed="0.126263"/>
+</kw>
+<kw name="Verify the Alert that image is required" owner="ShineResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:10.383356" level="INFO">Verifying element 'xpath://div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-filledError MuiAlert-filled css-u9ta6q']' contains exact text 'Image is required'.</msg>
+<arg>${Image_required}</arg>
+<arg>Image is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-30T16:17:10.383159" elapsed="0.033729"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:10.382785" elapsed="0.034204"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:03.251109" elapsed="7.165912"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Tester&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:10.417259" elapsed="0.000030"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.417413" elapsed="0.000029"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.417522" elapsed="0.000022"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.417683" elapsed="0.000034"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.417816" elapsed="0.000027"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:10.417958" elapsed="0.000019"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:10.418042" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:10.417067" elapsed="0.001014"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Resources&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418240" elapsed="0.000019"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418322" elapsed="0.000016"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418395" elapsed="0.000016"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418469" elapsed="0.000015"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418541" elapsed="0.000022"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:10.418617" elapsed="0.000015"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:10.418690" elapsed="0.000016"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418768" elapsed="0.000020"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418844" elapsed="0.000020"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:10.418128" elapsed="0.000759"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Testings&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:10.418994" elapsed="0.000018"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.419074" elapsed="0.000016"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.419148" elapsed="0.000015"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.419218" elapsed="0.000015"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.419287" elapsed="0.000015"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:10.419354" elapsed="0.000014"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.419435" elapsed="0.000018"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.419510" elapsed="0.000016"/>
+</kw>
+<kw name="Send input to add title in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420317" elapsed="0.000063"/>
+</kw>
+<kw name="Send input to add description in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420494" elapsed="0.000023"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420582" elapsed="0.000017"/>
+</kw>
+<kw name="Click the delete icon in the shine panel" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420660" elapsed="0.000016"/>
+</kw>
+<kw name="Click the delete alert" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420740" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:10.418914" elapsed="0.001877"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Automation&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420893" elapsed="0.000017"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.420971" elapsed="0.000026"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421057" elapsed="0.000016"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421131" elapsed="0.000016"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421201" elapsed="0.000015"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:10.421271" elapsed="0.000015"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421347" elapsed="0.000016"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421426" elapsed="0.000017"/>
+</kw>
+<kw name="Click the delete icon in the add shine" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421498" elapsed="0.000015"/>
+</kw>
+<kw name="Assert the text of no definition added" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:10.421566" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:10.420818" elapsed="0.000781"/>
+</branch>
+<status status="PASS" start="2025-05-30T16:17:03.251073" elapsed="7.170629"/>
+</if>
+<arg>title=Testing</arg>
+<arg>description=Testing is important step in SDLC.</arg>
+<status status="PASS" start="2025-05-30T16:17:03.250796" elapsed="7.170965"/>
+=======
 <<<<<<< HEAD
 <status status="PASS" start="2025-05-30T16:20:25.235435" elapsed="0.001779"/>
 </kw>
@@ -126,10 +415,37 @@
 <status status="PASS" start="2025-05-30T16:20:30.511397" elapsed="0.035394"/>
 </kw>
 <status status="PASS" start="2025-05-30T16:20:30.124316" elapsed="0.422613"/>
+>>>>>>> 40846f396ee5ce04f4c8584026ab27209a4b5d63
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-30T16:17:10.422268" elapsed="2.536472"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:10.422075" elapsed="2.536949"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-05-30T16:16:59.612872" elapsed="13.346577"/>
+</test>
+<test id="s1-t2" name="Verify the Shine" line="15">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:12.965807" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-30T16:17:12.965383" elapsed="1.582558"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:14.548666" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-30T16:17:14.548359" elapsed="5.466608"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-30T16:17:20.015139" elapsed="0.037009"/>
+=======
 <status status="PASS" start="2025-05-30T16:20:30.547791" elapsed="2.228246"/>
 </kw>
 <status status="PASS" start="2025-05-30T16:20:30.547513" elapsed="2.228764"/>
@@ -155,10 +471,1221 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2025-05-30T16:20:35.968543" elapsed="0.050490"/>
+>>>>>>> 40846f396ee5ce04f4c8584026ab27209a4b5d63
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-30T16:17:20.052327" elapsed="0.001089"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:12.964620" elapsed="7.088958"/>
+</kw>
+<kw name="Crud operation in Shine">
+<if>
+<branch type="IF" condition="'${title}'==&quot;Testing&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:20.054798" elapsed="0.000036"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:20.055122" elapsed="0.000037"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:20.056850" elapsed="0.000104"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:20.057154" elapsed="0.000040"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:20.057817" elapsed="0.000047"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:20.057991" elapsed="0.000028"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:20.058128" elapsed="0.000027"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:20.058258" elapsed="0.000028"/>
+</kw>
+<kw name="Verify the Alert that image is required" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:20.058382" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:20.054514" elapsed="0.003924"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Tester&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:20.059661" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:20.059318" elapsed="0.225359"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:20.285217" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-30T16:17:20.405835" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:20.284886" elapsed="0.250288"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:20.535492" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:20.535334" elapsed="0.149637"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:20.058796" elapsed="0.626322"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_bar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:20.685664" elapsed="5.268705"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:25.955239" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:25.954761" elapsed="0.105446"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:20.685334" elapsed="5.375012"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${about_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:26.060825" elapsed="0.019903"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:26.081543" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:26.081087" elapsed="0.099596"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:26.060545" elapsed="0.120439"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${shrine_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:26.182027" elapsed="0.382733"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:26.566177" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:26.565161" elapsed="0.178600"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:26.181400" elapsed="0.562564"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:26.744698" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:26.744496" elapsed="0.796756"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:26.744167" elapsed="0.797232"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:27.542325" level="INFO">Typing text 'Tester' into text field 'xpath://input[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq']'.</msg>
+<arg>${add_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:27.542000" elapsed="0.245673"/>
+</kw>
+<arg>${title}</arg>
+<status status="PASS" start="2025-05-30T16:17:27.541641" elapsed="0.246331"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:27.789899" level="INFO">Typing text 'It plays an important role' into text field 'xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398'][1]'.</msg>
+<arg>${text_area}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:27.789351" elapsed="0.476732"/>
+</kw>
+<arg>${description}</arg>
+<status status="PASS" start="2025-05-30T16:17:27.788424" elapsed="0.477828"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:20.058481" elapsed="8.207851"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Resources&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:28.266838" elapsed="0.000083"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.267226" elapsed="0.000061"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.267557" elapsed="0.000083"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.267989" elapsed="0.000087"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.268371" elapsed="0.000080"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:28.268739" elapsed="0.000074"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:28.269062" elapsed="0.000072"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.269403" elapsed="0.000069"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.269727" elapsed="0.000071"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:28.266420" elapsed="0.003460"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Testings&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:28.270275" elapsed="0.000071"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.270595" elapsed="0.000069"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.270908" elapsed="0.000068"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.271223" elapsed="0.000069"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.271525" elapsed="0.000067"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:28.271829" elapsed="0.000070"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.272173" elapsed="0.000067"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.272465" elapsed="0.000065"/>
+</kw>
+<kw name="Send input to add title in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.272770" elapsed="0.000071"/>
+</kw>
+<kw name="Send input to add description in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.273144" elapsed="0.000070"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.273431" elapsed="0.000074"/>
+</kw>
+<kw name="Click the delete icon in the shine panel" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.273892" elapsed="0.000117"/>
+</kw>
+<kw name="Click the delete alert" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.274400" elapsed="0.000104"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:28.269978" elapsed="0.004632"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Automation&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:28.275052" elapsed="0.000075"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.275376" elapsed="0.000065"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.275719" elapsed="0.000066"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.276018" elapsed="0.000065"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.276303" elapsed="0.000066"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:28.276586" elapsed="0.000064"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.276953" elapsed="0.000074"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.277259" elapsed="0.000064"/>
+</kw>
+<kw name="Click the delete icon in the add shine" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.277543" elapsed="0.000063"/>
+</kw>
+<kw name="Assert the text of no definition added" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:28.277833" elapsed="0.000056"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:28.274727" elapsed="0.003231"/>
+</branch>
+<status status="PASS" start="2025-05-30T16:17:20.054476" elapsed="8.223568"/>
+</if>
+<arg>title=Tester</arg>
+<arg>description=It plays an important role</arg>
+<status status="PASS" start="2025-05-30T16:17:20.054145" elapsed="8.224056"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-30T16:17:28.279740" elapsed="3.644722"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:28.279090" elapsed="3.645746"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-05-30T16:17:12.960959" elapsed="19.002490"/>
+</test>
+<test id="s1-t3" name="Verify the Shine" line="15">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:32.114504" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-30T16:17:32.113888" elapsed="2.539087"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:34.653555" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-30T16:17:34.653270" elapsed="4.038291"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-30T16:17:38.691775" elapsed="0.024147"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-30T16:17:38.716091" elapsed="0.000778"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:32.113017" elapsed="6.603929"/>
+</kw>
+<kw name="Crud operation in Shine">
+<if>
+<branch type="IF" condition="'${title}'==&quot;Testing&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:38.717671" elapsed="0.000020"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.717784" elapsed="0.000019"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.717866" elapsed="0.000016"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.717942" elapsed="0.000018"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718016" elapsed="0.000015"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:38.718084" elapsed="0.000017"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:38.718158" elapsed="0.000016"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718242" elapsed="0.000016"/>
+</kw>
+<kw name="Verify the Alert that image is required" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718313" elapsed="0.000015"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:38.717509" elapsed="0.000837"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Tester&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718497" elapsed="0.000017"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718577" elapsed="0.000016"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718660" elapsed="0.000016"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718732" elapsed="0.000015"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:38.718802" elapsed="0.000015"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:38.718869" elapsed="0.000016"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:38.718942" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:38.718372" elapsed="0.000605"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Resources&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:38.719413" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:38.719262" elapsed="0.230821"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:38.950611" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-30T16:17:39.050847" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:38.950323" elapsed="0.214548"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:39.165644" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:39.165271" elapsed="0.111231"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:38.719116" elapsed="0.557572"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_bar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:39.277417" elapsed="4.376722"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:43.654748" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:43.654449" elapsed="0.365010"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:39.277106" elapsed="4.742630"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${about_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:44.020888" elapsed="0.094682"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:44.117046" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:44.116551" elapsed="0.116098"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:44.020166" elapsed="0.212625"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${shrine_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:44.233407" elapsed="0.245387"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:44.479526" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:44.479133" elapsed="0.163431"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:44.232999" elapsed="0.409822"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:44.643642" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:44.643428" elapsed="0.564175"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:44.643101" elapsed="0.564736"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:45.208871" level="INFO">Typing text 'Resources' into text field 'xpath://input[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq']'.</msg>
+<arg>${add_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:45.208559" elapsed="0.614092"/>
+</kw>
+<arg>${title}</arg>
+<status status="PASS" start="2025-05-30T16:17:45.208042" elapsed="0.614816"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:45.824277" level="INFO">Typing text 'It plays a vital role' into text field 'xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398'][1]'.</msg>
+<arg>${text_area}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:45.823817" elapsed="0.262018"/>
+</kw>
+<arg>${description}</arg>
+<status status="PASS" start="2025-05-30T16:17:45.823175" elapsed="0.262876"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-30T16:17:46.087240" level="INFO">${file_input} = css:input[type="file"][accept="image/*"]</msg>
+<var>${file_input}</var>
+<arg>css:input[type="file"][accept="image/*"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-30T16:17:46.086929" elapsed="0.000372"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:46.088086" level="INFO">Sending C:\Users\drcha\Desktop\Smart_cliif_Project\SmartCliff-Admin-Project\Resources\about_us_images\Sunlit Park Walk.jpg to browser.</msg>
+<arg>${file_input}</arg>
+<arg>${IMAGE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:46.087654" elapsed="0.036142"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:46.086390" elapsed="0.037637"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:46.125215" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-h6pgjh']'.</msg>
+<arg>${submit_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:46.124867" elapsed="0.073573"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:46.124363" elapsed="0.074237"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:38.718998" elapsed="7.479776"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Testings&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:46.199133" elapsed="0.000047"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.199461" elapsed="0.000052"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.199630" elapsed="0.000022"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.199741" elapsed="0.000023"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.199864" elapsed="0.000027"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:46.199986" elapsed="0.000046"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.200169" elapsed="0.000032"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.200338" elapsed="0.000035"/>
+</kw>
+<kw name="Send input to add title in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.200502" elapsed="0.000030"/>
+</kw>
+<kw name="Send input to add description in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.200676" elapsed="0.000044"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.200840" elapsed="0.000029"/>
+</kw>
+<kw name="Click the delete icon in the shine panel" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.200973" elapsed="0.000031"/>
+</kw>
+<kw name="Click the delete alert" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.201135" elapsed="0.000033"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:46.198852" elapsed="0.002348"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Automation&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:46.201387" elapsed="0.000026"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.201504" elapsed="0.000040"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.201656" elapsed="0.000029"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.201778" elapsed="0.000017"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.201965" elapsed="0.000049"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:46.202190" elapsed="0.000048"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.202477" elapsed="0.000050"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.202707" elapsed="0.000047"/>
+</kw>
+<kw name="Click the delete icon in the add shine" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.202920" elapsed="0.000044"/>
+</kw>
+<kw name="Assert the text of no definition added" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:46.203135" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:46.201248" elapsed="0.001988"/>
+</branch>
+<status status="PASS" start="2025-05-30T16:17:38.717490" elapsed="7.485820"/>
+</if>
+<arg>title=Resources</arg>
+<arg>description=It plays a vital role</arg>
+<status status="PASS" start="2025-05-30T16:17:38.717307" elapsed="7.486392"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-30T16:17:46.204555" elapsed="3.411262"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:46.204266" elapsed="3.413453"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-05-30T16:17:32.108407" elapsed="17.509668"/>
+</test>
+<test id="s1-t4" name="Verify the Shine" line="15">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:49.658687" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-30T16:17:49.657399" elapsed="2.007140"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:51.665507" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-30T16:17:51.665061" elapsed="7.243028"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-30T16:17:58.908404" elapsed="0.027053"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-30T16:17:58.935699" elapsed="0.002595"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:49.655833" elapsed="9.282601"/>
+</kw>
+<kw name="Crud operation in Shine">
+<if>
+<branch type="IF" condition="'${title}'==&quot;Testing&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:58.940014" elapsed="0.000064"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.940268" elapsed="0.000060"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.940441" elapsed="0.000021"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.940536" elapsed="0.000018"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.940619" elapsed="0.000017"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:58.940699" elapsed="0.000030"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:58.940886" elapsed="0.000031"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.941009" elapsed="0.000019"/>
+</kw>
+<kw name="Verify the Alert that image is required" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.941090" elapsed="0.000016"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:58.939529" elapsed="0.001596"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Tester&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:58.941588" elapsed="0.000107"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.942057" elapsed="0.000059"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.942249" elapsed="0.000027"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.942365" elapsed="0.000027"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.942496" elapsed="0.000029"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:58.942633" elapsed="0.000038"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:58.942901" elapsed="0.000045"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:58.941183" elapsed="0.001832"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Resources&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:17:58.943473" elapsed="0.000029"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.943634" elapsed="0.000023"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.943720" elapsed="0.000017"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.943797" elapsed="0.000033"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.943937" elapsed="0.000026"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:58.944064" elapsed="0.000028"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:17:58.944199" elapsed="0.000028"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.944313" elapsed="0.000016"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:17:58.944398" elapsed="0.000019"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:17:58.943136" elapsed="0.001302"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Testings&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:58.944968" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:58.944812" elapsed="0.204633"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:59.149881" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-30T16:17:59.240902" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:59.149620" elapsed="0.200717"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:17:59.350672" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:17:59.350506" elapsed="0.101671"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:58.944626" elapsed="0.507740"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_bar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:17:59.453550" elapsed="4.215728"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:03.669925" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:03.669519" elapsed="0.062048"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:59.453056" elapsed="4.278697"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${about_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:18:03.732389" elapsed="0.246381"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:03.979386" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:03.979032" elapsed="0.075776"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:03.732102" elapsed="0.322807"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${shrine_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:18:04.055281" elapsed="0.253135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:04.309132" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:04.308749" elapsed="0.129936"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:04.055064" elapsed="0.383767"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:04.439567" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:04.439347" elapsed="1.261562"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:04.439034" elapsed="1.262064"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:05.701712" level="INFO">Typing text 'Testings' into text field 'xpath://input[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq']'.</msg>
+<arg>${add_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:05.701539" elapsed="0.170000"/>
+</kw>
+<arg>${title}</arg>
+<status status="PASS" start="2025-05-30T16:18:05.701279" elapsed="0.170399"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-30T16:18:05.872423" level="INFO">${file_input} = css:input[type="file"][accept="image/*"]</msg>
+<var>${file_input}</var>
+<arg>css:input[type="file"][accept="image/*"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-30T16:18:05.872239" elapsed="0.000215"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:05.872775" level="INFO">Sending C:\Users\drcha\Desktop\Smart_cliif_Project\SmartCliff-Admin-Project\Resources\about_us_images\Sunlit Park Walk.jpg to browser.</msg>
+<arg>${file_input}</arg>
+<arg>${IMAGE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:05.872569" elapsed="0.039035"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:05.871913" elapsed="0.039858"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:05.912619" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-11pdzw']'.</msg>
+<arg>${add_defintions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:05.912347" elapsed="0.089184"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:05.911963" elapsed="0.089703"/>
+</kw>
+<kw name="Send input to add title in add definitions" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:06.002388" level="INFO">Clicking element 'xpath://h6[@class='MuiTypography-root MuiTypography-h6 css-1anx036']//parent::div//parent::div//following-sibling::div//child::div[1]//div[1]//input'.</msg>
+<arg>${add_def_title}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:06.002182" elapsed="0.082538"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:06.085419" level="INFO">Sending key(s) ('First check',) to xpath://h6[@class='MuiTypography-root MuiTypography-h6 css-1anx036']//parent::div//parent::div//following-sibling::div//child::div[1]//div[1]//input element.</msg>
+<msg time="2025-05-30T16:18:06.409763" level="INFO">Sending keys First check</msg>
+<arg>${add_def_title}</arg>
+<arg>First check</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-30T16:18:06.084971" elapsed="0.518825"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:06.001891" elapsed="0.602043"/>
+</kw>
+<kw name="Send input to add description in add definitions" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:06.604655" level="INFO">Clicking element 'xpath://h6[@class='MuiTypography-root MuiTypography-h6 css-1anx036']//parent::div//parent::div//following-sibling::div//child::div[2]//div[1]//child::textarea[1]'.</msg>
+<arg>${add_def_description}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:06.604439" elapsed="0.047075"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:06.652607" level="INFO">Sending key(s) ('Software plays an important role',) to xpath://h6[@class='MuiTypography-root MuiTypography-h6 css-1anx036']//parent::div//parent::div//following-sibling::div//child::div[2]//div[1]//child::textarea[1] element.</msg>
+<msg time="2025-05-30T16:18:06.942119" level="INFO">Sending keys Software plays an important role</msg>
+<arg>${add_def_description}</arg>
+<arg>Software plays an important role</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-30T16:18:06.651788" elapsed="0.730332"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:06.604138" elapsed="0.778076"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:07.382899" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-h6pgjh']'.</msg>
+<arg>${submit_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:07.382738" elapsed="0.114810"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:07.382372" elapsed="0.115669"/>
+</kw>
+<kw name="Click the delete icon in the shine panel" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:07.499155" level="INFO">Clicking element 'xpath://div[@id="root"]/div[1]/main/div[2]/div[2]/div/table/tbody/tr[7]/td[5]/div/button[2]'.</msg>
+<arg>${delete_addshine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:07.498913" elapsed="4.257668"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:07.498556" elapsed="4.258667"/>
+</kw>
+<kw name="Click the delete alert" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:11.758510" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1ecefdc']'.</msg>
+<arg>${delete_alert}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:11.758088" elapsed="0.111347"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:11.757544" elapsed="0.111994"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:17:58.944473" elapsed="12.925099"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Automation&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:18:11.870093" elapsed="0.000083"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.870439" elapsed="0.000058"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.870712" elapsed="0.000055"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.870983" elapsed="0.000058"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.871235" elapsed="0.000049"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:11.871462" elapsed="0.000049"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.871714" elapsed="0.000048"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.871932" elapsed="0.000048"/>
+</kw>
+<kw name="Click the delete icon in the add shine" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.872146" elapsed="0.000047"/>
+</kw>
+<kw name="Assert the text of no definition added" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:11.872360" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:18:11.869653" elapsed="0.002807"/>
+</branch>
+<status status="PASS" start="2025-05-30T16:17:58.939455" elapsed="12.933078"/>
+</if>
+<arg>title=Testings</arg>
+<arg>description=</arg>
+<status status="PASS" start="2025-05-30T16:17:58.939067" elapsed="12.933596"/>
+</kw>
+<kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-30T16:18:11.874602" elapsed="3.218938"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:11.873734" elapsed="3.219951"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-05-30T16:17:49.621957" elapsed="25.472148"/>
+</test>
+<test id="s1-t5" name="Verify the Shine" line="15">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:15.100397" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-30T16:18:15.100244" elapsed="2.132174"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:17.232887" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-30T16:18:17.232681" elapsed="3.279207"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-30T16:18:20.512053" elapsed="0.038840"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-30T16:18:20.551121" elapsed="0.001615"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:15.099986" elapsed="5.452867"/>
+</kw>
+<kw name="Crud operation in Shine">
+<if>
+<branch type="IF" condition="'${title}'==&quot;Testing&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:18:20.555501" elapsed="0.000125"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.556003" elapsed="0.000074"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.556264" elapsed="0.000047"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.556441" elapsed="0.000042"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.556577" elapsed="0.000023"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.556682" elapsed="0.000023"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.556798" elapsed="0.000031"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.556926" elapsed="0.000022"/>
+</kw>
+<kw name="Verify the Alert that image is required" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.557030" elapsed="0.000038"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:18:20.554939" elapsed="0.002160"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Tester&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:18:20.557545" elapsed="0.000032"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.557684" elapsed="0.000030"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.557824" elapsed="0.000041"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.557975" elapsed="0.000073"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.558221" elapsed="0.000037"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.558397" elapsed="0.000028"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.558533" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:18:20.557145" elapsed="0.001458"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Resources&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:18:20.558871" elapsed="0.000031"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559011" elapsed="0.000028"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559144" elapsed="0.000018"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559233" elapsed="0.000019"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559316" elapsed="0.000021"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.559406" elapsed="0.000017"/>
+</kw>
+<kw name="Send input to the description in the shine page" owner="ShineResource">
+<arg>${description}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.559492" elapsed="0.000018"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559581" elapsed="0.000018"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559659" elapsed="0.000021"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:18:20.558643" elapsed="0.001060"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Testings&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559899" elapsed="0.000018"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.559994" elapsed="0.000021"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.560080" elapsed="0.000017"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.560160" elapsed="0.000020"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.560235" elapsed="0.000017"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<arg>${title}</arg>
+<status status="NOT RUN" start="2025-05-30T16:18:20.560307" elapsed="0.000095"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.560607" elapsed="0.000040"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.560772" elapsed="0.000032"/>
+</kw>
+<kw name="Send input to add title in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.560922" elapsed="0.000039"/>
+</kw>
+<kw name="Send input to add description in add definitions" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.561083" elapsed="0.000036"/>
+</kw>
+<kw name="Click the Submit button in the add shrine page" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.561235" elapsed="0.000030"/>
+</kw>
+<kw name="Click the delete icon in the shine panel" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.561369" elapsed="0.000036"/>
+</kw>
+<kw name="Click the delete alert" owner="ShineResource">
+<status status="NOT RUN" start="2025-05-30T16:18:20.561524" elapsed="0.000033"/>
+</kw>
+<status status="NOT RUN" start="2025-05-30T16:18:20.559735" elapsed="0.001858"/>
+</branch>
+<branch type="ELSE IF" condition="'${title}'==&quot;Automation&quot;">
+<kw name="Fill the valid Login Credentials" owner="GenericResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:20.562400" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<arg>xpath://input[@id='signin-email']</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:20.562163" elapsed="0.323065"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:20.885624" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-30T16:18:20.921033" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@id='signin-password']</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:20.885403" elapsed="0.137965"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:21.023760" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<arg>xpath://button[@id='signin-submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:21.023568" elapsed="0.104953"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:20.561872" elapsed="0.566757"/>
+</kw>
+<kw name="Click the menu in the home page" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_bar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:18:21.129055" elapsed="4.422898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:25.552415" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-q6oun']'.</msg>
+<arg>${app_bar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:25.552173" elapsed="0.658143"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:21.128801" elapsed="5.081751"/>
+</kw>
+<kw name="Click the about in the Menubar" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${about_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:18:26.211628" elapsed="0.026259"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:26.238233" level="INFO">Clicking element 'xpath:(//span[contains(@class,'MuiListItemText-primary')])[2]'.</msg>
+<arg>${about_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:26.238047" elapsed="0.165410"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:26.211045" elapsed="0.192507"/>
+</kw>
+<kw name="Click the shrine element in the about" owner="ShineResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${shrine_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T16:18:26.403888" elapsed="0.277527"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:26.682332" level="INFO">Clicking element 'xpath://div[@class='MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6poya9'][3]'.</msg>
+<arg>${shrine_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:26.681854" elapsed="0.188596"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:26.403694" elapsed="0.466914"/>
+</kw>
+<kw name="Click the add shrine in the shrine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:26.871474" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ssnmq7']'.</msg>
+<arg>${add_shrine}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:26.871146" elapsed="0.981594"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:26.870820" elapsed="0.982055"/>
+</kw>
+<kw name="Send input to the title in the shine page" owner="ShineResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:27.853605" level="INFO">Typing text 'Automation' into text field 'xpath://input[@class='MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq']'.</msg>
+<arg>${add_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:27.853397" elapsed="0.390697"/>
+</kw>
+<arg>${title}</arg>
+<status status="PASS" start="2025-05-30T16:18:27.853066" elapsed="0.391166"/>
+</kw>
+<kw name="Send input as image in shrine page" owner="ShineResource">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-30T16:18:28.244866" level="INFO">${file_input} = css:input[type="file"][accept="image/*"]</msg>
+<var>${file_input}</var>
+<arg>css:input[type="file"][accept="image/*"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-30T16:18:28.244718" elapsed="0.000179"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:28.245202" level="INFO">Sending C:\Users\drcha\Desktop\Smart_cliif_Project\SmartCliff-Admin-Project\Resources\about_us_images\Sunlit Park Walk.jpg to browser.</msg>
+<arg>${file_input}</arg>
+<arg>${IMAGE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:28.245006" elapsed="0.072985"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:28.244433" elapsed="0.073678"/>
+</kw>
+<kw name="Click add definitions in adding shine page" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:28.318664" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-11pdzw']'.</msg>
+<arg>${add_defintions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:28.318506" elapsed="0.115446"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:28.318277" elapsed="0.115875"/>
+</kw>
+<kw name="Click the delete icon in the add shine" owner="ShineResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:28.436382" level="INFO">Clicking element 'xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorError MuiIconButton-sizeMedium css-1oh31is']'.</msg>
+<arg>${add_def_desletebutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T16:18:28.435138" elapsed="0.097997"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:28.434467" elapsed="0.098903"/>
+</kw>
+<kw name="Assert the text of no definition added" owner="ShineResource">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-30T16:18:28.553660" level="INFO">Current page contains text 'No shine definitions added. Click "Add Definition" to create one.'.</msg>
+<arg>No shine definitions added. Click "Add Definition" to create one.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-30T16:18:28.534277" elapsed="0.019535"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:28.533714" elapsed="0.020248"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:20.561638" elapsed="7.992395"/>
+</branch>
+<status status="PASS" start="2025-05-30T16:18:20.554870" elapsed="7.999232"/>
+</if>
+<arg>title=Automation</arg>
+<arg>description=</arg>
+<status status="PASS" start="2025-05-30T16:18:20.554077" elapsed="8.000121"/>
+=======
 <status status="PASS" start="2025-05-30T16:20:36.019214" elapsed="0.001519"/>
 </kw>
 <status status="PASS" start="2025-05-30T16:20:32.778765" elapsed="3.242131"/>
@@ -333,10 +1860,39 @@
 </kw>
 <status status="PASS" start="2025-05-30T15:52:49.036350" elapsed="0.019662"/>
 >>>>>>> d2ed41d7e67158440e6b2d392fbad77c2039438e
+>>>>>>> 40846f396ee5ce04f4c8584026ab27209a4b5d63
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2025-05-30T16:18:28.555515" elapsed="2.346756"/>
+</kw>
+<status status="PASS" start="2025-05-30T16:18:28.554918" elapsed="2.347594"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-05-30T16:18:15.095509" elapsed="15.807505"/>
+</test>
+<doc>Test for Shine functionality</doc>
+<status status="PASS" start="2025-05-30T16:16:58.737350" elapsed="92.167596"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">regression</stat>
+</tag>
+<suite>
+<stat name="shineTest Excel" id="s1" pass="5" fail="0" skip="0">shineTest Excel</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-30T16:17:12.961337" level="WARN">Multiple tests with name 'Verify the Shine' executed in suite 'shineTest Excel'.</msg>
+<msg time="2025-05-30T16:17:32.108544" level="WARN">Multiple tests with name 'Verify the Shine' executed in suite 'shineTest Excel'.</msg>
+<msg time="2025-05-30T16:17:49.622089" level="WARN">Multiple tests with name 'Verify the Shine' executed in suite 'shineTest Excel'.</msg>
+<msg time="2025-05-30T16:18:15.095649" level="WARN">Multiple tests with name 'Verify the Shine' executed in suite 'shineTest Excel'.</msg>
+=======
 <<<<<<< HEAD
 <status status="PASS" start="2025-05-30T16:20:43.363321" elapsed="2.246431"/>
 </kw>
@@ -774,5 +2330,6 @@
 <errors>
 <msg time="2025-05-30T15:52:39.312278" level="WARN">Error in file 'C:\SmartCliff-Admin-Project\Resources\AboutUsResource.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 >>>>>>> d2ed41d7e67158440e6b2d392fbad77c2039438e
+>>>>>>> 40846f396ee5ce04f4c8584026ab27209a4b5d63
 </errors>
 </robot>
