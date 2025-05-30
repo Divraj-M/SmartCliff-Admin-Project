@@ -1,108 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-30T15:15:36.298481" rpa="false" schemaversion="5">
-<suite id="s1" name="YearlyService Test" source="C:\SmartCliff-Admin-Project\Tests\YearlyService_Test.robot">
-<test id="s1-t1" name="validate working of pagination arrow in yearly service panel" line="55">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-30T15:52:38.721481" rpa="false" schemaversion="5">
+<suite id="s1" name="AboutUs Test" source="C:\SmartCliff-Admin-Project\Tests\AboutUs_Test.robot">
+<test id="s1-t1" name="validate invalid search in about us control panel" line="35">
 <kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:36.855509" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-05-30T15:52:39.338013" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser_name}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-05-30T15:15:36.855159" elapsed="1.395961"/>
+<status status="PASS" start="2025-05-30T15:52:39.337315" elapsed="1.624834"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:38.251670" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
+<msg time="2025-05-30T15:52:40.962741" level="INFO">Opening url 'https://smart-cliff-admin.vercel.app/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-05-30T15:15:38.251422" elapsed="3.220749"/>
+<status status="PASS" start="2025-05-30T15:52:40.962486" elapsed="2.415612"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-30T15:15:41.472639" elapsed="0.051204"/>
+<status status="PASS" start="2025-05-30T15:52:43.378368" elapsed="0.071786"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-05-30T15:15:41.524094" elapsed="0.001735"/>
+<status status="PASS" start="2025-05-30T15:52:43.450482" elapsed="0.001737"/>
 </kw>
-<status status="PASS" start="2025-05-30T15:15:36.853886" elapsed="4.672131"/>
+<status status="PASS" start="2025-05-30T15:52:39.336089" elapsed="4.116319"/>
 </kw>
 <kw name="Fill the valid Login Credentials" owner="GenericResources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:41.527648" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
+<msg time="2025-05-30T15:52:43.453836" level="INFO">Typing text 'abcraj@gmail.com' into text field 'xpath://input[@id='signin-email']'.</msg>
 <arg>xpath://input[@id='signin-email']</arg>
 <arg>${valid_username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-30T15:15:41.527173" elapsed="0.421318"/>
+<status status="PASS" start="2025-05-30T15:52:43.453263" elapsed="0.591850"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:41.949097" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
-<msg time="2025-05-30T15:15:41.997413" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-05-30T15:52:44.045801" level="INFO">Typing password into text field 'xpath://input[@id='signin-password']'.</msg>
+<msg time="2025-05-30T15:52:44.108570" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>xpath://input[@id='signin-password']</arg>
 <arg>${valid_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-30T15:15:41.948720" elapsed="0.168412"/>
+<status status="PASS" start="2025-05-30T15:52:44.045425" elapsed="0.267369"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:42.117492" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
+<msg time="2025-05-30T15:52:44.313634" level="INFO">Clicking button 'xpath://button[@id='signin-submit']'.</msg>
 <arg>xpath://button[@id='signin-submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-30T15:15:42.117319" elapsed="0.661275"/>
+<status status="PASS" start="2025-05-30T15:52:44.313212" elapsed="0.172543"/>
 </kw>
-<status status="PASS" start="2025-05-30T15:15:41.526722" elapsed="1.252163"/>
+<status status="PASS" start="2025-05-30T15:52:43.452888" elapsed="1.033095"/>
 </kw>
-<kw name="click yearly service in side menu" owner="YearlyService_Resource">
+<kw name="click about us in side menu" owner="AboutUsResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${about_icon}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-30T15:15:42.780063" elapsed="5.405585"/>
+<status status="PASS" start="2025-05-30T15:52:44.486891" elapsed="3.294514"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:48.186407" level="INFO">Clicking element 'xpath://div[contains(@id,'drawer')]/div/ul/li[2]/div'.</msg>
+<msg time="2025-05-30T15:52:47.782089" level="INFO">Clicking element 'xpath://div[contains(@id,'drawer')]/div/ul/li[2]/div'.</msg>
 <arg>${about_icon}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-30T15:15:48.186027" elapsed="0.108377"/>
+<status status="PASS" start="2025-05-30T15:52:47.781729" elapsed="0.176120"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${yearly_service_btn}</arg>
+<arg>${about_us}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-30T15:15:48.294739" elapsed="0.261618"/>
+<status status="PASS" start="2025-05-30T15:52:47.958296" elapsed="0.268937"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:48.556899" level="INFO">Clicking element 'xpath://div[contains(@id,'drawer')]/div/ul/li[2]/div[2]/div/div/div/div[4]'.</msg>
-<arg>${yearly_service_btn}</arg>
+<msg time="2025-05-30T15:52:48.228017" level="INFO">Clicking element 'xpath://div[contains(@id,'drawer')]/div/ul/li[2]/div[2]/div/div/div/div[1]'.</msg>
+<arg>${about_us}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-30T15:15:48.556597" elapsed="0.126083"/>
+<status status="PASS" start="2025-05-30T15:52:48.227635" elapsed="0.184727"/>
 </kw>
-<status status="PASS" start="2025-05-30T15:15:42.779368" elapsed="5.903465"/>
+<status status="PASS" start="2025-05-30T15:52:44.486486" elapsed="3.926105"/>
 </kw>
-<kw name="click side right arrow" owner="YearlyService_Resource">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${yearly_service_page_arrow_right}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-30T15:15:48.684009" elapsed="0.407919"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-30T15:52:48.413689" level="INFO">${search_keyword} = invalid</msg>
+<var>${search_keyword}</var>
+<arg>invalid</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-30T15:52:48.413149" elapsed="0.000595"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-30T15:15:49.092338" level="INFO">Clicking element 'xpath://*[@id="root"]/div[1]/main/div[3]/div[2]/div[2]/div/div[3]/button[2]'.</msg>
-<arg>${yearly_service_page_arrow_right}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-30T15:15:49.092119" elapsed="0.103887"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T15:52:48.414334" level="INFO">Typing text 'invalid' into text field 'xpath://div[contains(@id,'root')]/div[1]/main/div[2]/div[1]/div[1]/div/div//input'.</msg>
+<arg>${search_box}</arg>
+<arg>${search_keyword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T15:52:48.414065" elapsed="0.621785"/>
 </kw>
-<status status="PASS" start="2025-05-30T15:15:48.683446" elapsed="0.512740"/>
+<kw name="page should not contain entries" owner="AboutUsResource">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-30T15:52:49.055775" level="INFO">Current page contains text 'No entries found'.</msg>
+<arg>No entries found</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-30T15:52:49.036713" elapsed="0.019181"/>
+</kw>
+<status status="PASS" start="2025-05-30T15:52:49.036350" elapsed="0.019662"/>
 </kw>
 <kw name="Close browser session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-30T15:15:49.196910" elapsed="2.269986"/>
+<status status="PASS" start="2025-05-30T15:52:49.056893" elapsed="2.325551"/>
 </kw>
-<status status="PASS" start="2025-05-30T15:15:49.196634" elapsed="2.270474"/>
+<status status="PASS" start="2025-05-30T15:52:49.056524" elapsed="2.326140"/>
 </kw>
 <tag>Regression</tag>
-<status status="PASS" start="2025-05-30T15:15:36.852332" elapsed="14.615083"/>
+<status status="PASS" start="2025-05-30T15:52:39.334331" elapsed="12.048760"/>
 </test>
 <doc>Test on About us</doc>
-<status status="PASS" start="2025-05-30T15:15:36.300859" elapsed="15.168087"/>
+<status status="PASS" start="2025-05-30T15:52:38.725060" elapsed="12.659733"/>
 </suite>
 <statistics>
 <total>
@@ -112,10 +121,10 @@
 <stat pass="1" fail="0" skip="0">Regression</stat>
 </tag>
 <suite>
-<stat name="YearlyService Test" id="s1" pass="1" fail="0" skip="0">YearlyService Test</stat>
+<stat name="AboutUs Test" id="s1" pass="1" fail="0" skip="0">AboutUs Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-30T15:15:36.819034" level="WARN">Error in file 'C:\SmartCliff-Admin-Project\Resources\AboutUsResource.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-05-30T15:52:39.312278" level="WARN">Error in file 'C:\SmartCliff-Admin-Project\Resources\AboutUsResource.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

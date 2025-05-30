@@ -157,4 +157,6 @@ the user should see updated title
     [Arguments]    ${new_title}
     Page Should Contain    ${new_title}
 
+page should not contain entries
+    Page Should Contain    No entries found
 
