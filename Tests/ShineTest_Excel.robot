@@ -15,7 +15,8 @@ ${description}
 Verify the Shine
     [Tags]    Regression
     [Template]    Crud operation in Shine
-    ${title}	${description}
+    ${title}    ${description}
+
 
 *** Keywords ***
 Crud operation in Shine
