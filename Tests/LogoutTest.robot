@@ -8,6 +8,7 @@ Resource    ../Resources/LogoutResource.robot
 
 *** Test Cases ***
 validate successful logout
+    [Tags]    Regression    smoke
     Fill the valid Login Credentials
     logout from current session
     

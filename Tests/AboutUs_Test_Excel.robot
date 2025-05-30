@@ -14,6 +14,7 @@ ${new_title}
 
 *** Test Cases ***
 AboutUs panel row addition and deletion validation
+    [Tags]    Regression
     [Template]    validating multiple inputs on test form validation
     ${content_text}    ${test_case_name}
 

@@ -9,11 +9,13 @@ Resource    ../Resources/YearlyService_Resource.robot
 
 *** Test Cases ***
 Validate about us landing page of yearly service
+    [Tags]    Regression
     Fill the valid Login Credentials
     click yearly service in side menu
     User should see the yearly service history panel
 
 Validate back button in History Data Add Form
+    [Tags]    Regression
     Fill the valid Login Credentials
     click yearly service in side menu
     Click add new yearly service
@@ -21,6 +23,7 @@ Validate back button in History Data Add Form
     User should see the yearly service history panel
 
 validate search year in yearly service panel
+    [Tags]    Regression
     Fill the valid Login Credentials
     click yearly service in side menu
     ${search_keyword}=    Set Variable    2023
@@ -31,6 +34,7 @@ validate search year in yearly service panel
     Validate Search in yearly servic Results    ${search_keyword}    ${columns_yearly_serv}
 
 validate search Business service in yearly service panel
+    [Tags]    Regression
     Fill the valid Login Credentials
     click yearly service in side menu
     ${search_keyword}=    Set Variable    b2b
