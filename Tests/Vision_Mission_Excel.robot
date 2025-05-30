@@ -62,7 +62,7 @@ Crud operation in Vission and Mission
         Vision_MissionResources.add the Description in the textarea    ${descriptiontext}
         Vision_MissionResources.add the content in the vission
         Vision_MissionResources.Delete the description from the table as confirm    ${descriptiontext}
-        Vision_MissionResources.Delete the description from the table    ${descriptiontext}
+        Vision_MissionResources.Delete the description from the table    ${descriptiontext}    
     END
 
 
