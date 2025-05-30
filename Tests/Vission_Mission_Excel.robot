@@ -14,9 +14,9 @@ ${descriptiontext}
 
 *** Test Cases ***
 Verify the Vision and Mission
+    [Tags]    Regression
     [Template]    Crud operation in Vission and Mission
-    ${descriptiontext} 
-
+    Valid Vision and Mission description
 
 
 
@@ -53,6 +53,16 @@ Crud operation in Vission and Mission
         Vision_MissionResources.add the Description in the textarea    ${descriptiontext}
         Vision_MissionResources.add the content in the vission
         Vision_MissionResources.add the text to edit in vission    ${descriptiontext}
+    ELSE IF    '${descriptiontext}'=="Hulk"
+        GenericResources.Fill the valid Login Credentials
+        Vision_MissionResources.Click the about in the menu list
+        Vision_MissionResources.click the vision&Mission in the list
+        Vision_MissionResources.click the add vision and Mission
+        Vision_MissionResources.click the Mission in the dropdown
+        Vision_MissionResources.add the Description in the textarea    ${descriptiontext}
+        Vision_MissionResources.add the content in the vission
+        Vision_MissionResources.Delete the description from the table as confirm    ${descriptiontext}
+        Vision_MissionResources.Delete the description from the table    ${descriptiontext}
     END
 
 

@@ -32,35 +32,37 @@ ${add_def_desletebutton}    xpath://button[@class='MuiButtonBase-root MuiIconBut
 *** Keywords ***
 Click the menu in the home page 
     Click Element     ${app_bar}
-    Sleep    5s
+    
 
 Click the about in the Menubar
     Click Element    ${about_element}
-    Sleep    5s
+    
 Click the shrine element in the about 
     Click Element    ${shrine_element}
-    Sleep    5s
+    
 Click the add shrine in the shrine page
     Click Element    ${add_shrine}
-    Sleep    5s
+    
 Click the back in the add shrine page
     Click Element    ${back}
-    Sleep    5s
+    
 Verify agin it redirected into shine page
     Element Text Should Be    ${shine_panel}    SHINE PANEL
-    Sleep    5s
+
 Send input to the title in the shine page
-    Input Text    ${add_title}    text=Testing
-    Sleep    5s
+    [Arguments]    ${title}
+    Input Text    ${add_title}    ${title}
+    
 Send input to the description in the shine page
-    Input Text    ${text_area}    text=Testing is important step in SDLC.
-    Sleep    5s
+    [Arguments]    ${description}
+    Input Text    ${text_area}    ${description}
+
 Click the Submit button in the add shrine page
     Click Element    ${submit_shrine}
-    Sleep    5s
+    
 Verify the Alert that image is required
     Element Text Should Be    ${Image_required}    Image is required
-    Sleep    5s
+   
 Send input to the search box
 #     Click Element    xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div
 #     Input Text    xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div    Testing
@@ -70,7 +72,7 @@ Send input to the search box
 
 Verify the title in the shine panel
     Page Should Contain    Testing
-    Sleep    5s
+    
 
 Send input as image in shrine page
       ${file_input}=    Set Variable    css:input[type="file"][accept="image/*"]
@@ -78,39 +80,39 @@ Send input as image in shrine page
     Choose File    ${file_input}    ${IMAGE_PATH}
 Click edit title in the shrine page
     Click Element    ${edit_shrine}
-    Sleep    2s
+   
 Send input to the title edit element
     Click Element    ${edit_title}
     Press Keys    ${add_title}    s
-    Sleep    2s
+   
 Click the update shrine button
     Click Element    ${update_shine}
-    Sleep    2s
+    
 Assert the edit title heading 
     Page Should Contain    Testings
-    Sleep    2s
+    
 Click add definitions in adding shine page
     Click Element    ${add_defintions}
-    Sleep    2s
+   
 Send input to add title in add definitions
     Click Element    ${add_def_title}
     Press Keys     ${add_def_title}    First check
-    Sleep    2s
+    
 Send input to add description in add definitions
     Click Element    ${add_def_description}
     Press Keys    ${add_def_description}    Software plays an important role
-    Sleep     2s
+   
 Click the delete icon in the shine panel
     Click Element    ${delete_addshine}
 Assert the deleted title in the shine panel
     Page Should Not Contain    Testings
-    Sleep    2s
+    
 Click the delete alert 
     Click Element    ${delete_alert}
-    Sleep    2s
+    
 Click the delete icon in the add shine
     Click Element    ${add_def_desletebutton}
-    Sleep    2s
+   
 Assert the text of no definition added
     Page Should Contain    No shine definitions added. Click "Add Definition" to create one.
 
