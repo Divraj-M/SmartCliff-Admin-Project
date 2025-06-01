@@ -8,7 +8,7 @@ ${AboutinMenu}              xpath://span[contains(text(),'About')]
 ${Vision&Mission}           xpath://span[contains(text(),'Vision & Mission')]
 ${vision&MissionPannelheading}    xpath://h4[contains(text(),'Vision & Mission Panel')]
 ${back}                     xpath://button[text()='Back']
-${addvisionandmission}      xpath://button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1hw9j7s']
+${addvisionandmission}      xpath://*[@id="root"]/div[1]/main/div[3]/div[1]/div[2]/button
 ${description}    xpath://textarea[@class='MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-u36398' and @name='description']
 ${add_content}              xpath://button[contains(text(),'Add Content')]
 ${deletebtn}                xpath://button[contains(@class,'MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1ecefdc')]
