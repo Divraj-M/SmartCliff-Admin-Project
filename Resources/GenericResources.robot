@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    resource file 
+Documentation    Resource file for Smart Cliff Admin headless login test
 Library    SeleniumLibrary
 
 *** Variables ***
@@ -10,7 +10,9 @@ ${browser_name}    Chrome
 
 *** Keywords ***
 Open the Browser with URL
-    Create Webdriver    ${browser_name}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Create Webdriver    ${browser_name}    options=${options}
     Go To    ${url}
     Maximize Browser Window
     Set Selenium Implicit Wait    10
@@ -22,4 +24,3 @@ Fill the valid Login Credentials
 
 Close browser session
     Close Browser
-
