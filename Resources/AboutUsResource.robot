@@ -92,7 +92,7 @@ Extract Titles From Table
         Append To List    ${titles}    ${title}
         Log To Console    Title found: ${title}
     END
-    [Return]    @{titles}
+    RETURN    @{titles}
 
 Validate Search Results
     
