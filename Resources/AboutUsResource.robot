@@ -46,7 +46,6 @@ fill add about us form
     Wait Until Element Is Enabled    ${DROPZONE_AREA}
     
     Click Element    ${DROPZONE_AREA}
-    Sleep    1s  
     ${file_input}=    Set Variable    css:input[type="file"][accept="image/*"]
     
    
@@ -54,7 +53,6 @@ fill add about us form
     # Wait Until Page Contains Element    css:.MuiDropzonePreviewList-image    10s
     
     Click Button    ${submit_content}
-    Sleep    5s
     
 click add about us button
     Click Button    ${add_abt_us_btn}
@@ -68,7 +66,6 @@ delete the new row in about us panel
     [Arguments]    ${content_text}
      Click Element    xpath=//td[contains(text(),'${content_text}')]//following-sibling::td//button[2]
      Click Button    ${del_again}
-     Sleep    1s
 
 the specified row should be removed in about us panel
     [Arguments]    ${content_text}
@@ -124,7 +121,6 @@ fill the form and remove image from form
     Wait Until Element Is Enabled    ${DROPZONE_AREA}
     
     Click Element    ${DROPZONE_AREA}
-    Sleep    1s  
     ${file_input}=    Set Variable    css:input[type="file"][accept="image/*"]
     
    
@@ -143,7 +139,6 @@ Error alert sould be displayed
 click edit button
     [Arguments]    ${content_text}
     Click Element    xpath=//td[contains(text(),'${content_text}')]//following-sibling::td//button[1]
-    Sleep    1s
 
 change text in the title    
     [Arguments]    ${new_title}

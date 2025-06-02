@@ -97,6 +97,33 @@ delete subservice in yearly service history panel
     delete sub service
     newly added service should be removed    ${service2}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 # add new business in yearly service history panel
 #     [Arguments]    ${year}    ${bussiness}    ${service1}    ${service2}
 #     Fill the valid Login Credentials
