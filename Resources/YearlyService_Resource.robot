@@ -134,12 +134,10 @@ the new row should be added
 
 delete the new row in yearly service history panel
     [Arguments]    ${service1}  
-    Sleep    2s
     Wait Until Element Is Visible    //table//tr[td[contains(.,"${service1}")]]//button[2]
     Wait Until Element Is Enabled    //table//tr[td[contains(.,"${service1}")]]//button[2]
 
     Click Element    //table//tr[td[contains(.,"${service1}")]]//button[2]
-    Sleep    2s
     # Wait Until Element Is Visible    ${del}
     # Click Element    ${del}
     Wait Until Element Is Enabled    ${del_again_service}

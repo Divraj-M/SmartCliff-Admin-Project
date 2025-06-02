@@ -31,7 +31,7 @@ ${delete_alert}    xpath://button[@class='MuiButtonBase-root MuiButton-root MuiB
 ${add_def_desletebutton}    xpath://button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorError MuiIconButton-sizeMedium css-1oh31is']
 *** Keywords ***
 Click the menu in the home page 
-    Wait Until Element Is Visible    ${app_bar}
+    Wait Until Element Is Visible    ${app_bar}    timeout=10s
     Click Element     ${app_bar}
     
 

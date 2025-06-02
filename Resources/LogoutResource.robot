@@ -21,7 +21,6 @@ Logout From Current Session
         ${url}=    Get Location
         Log To Console    Current URL: ${url}
         Exit For Loop If    ${logout_success}
-        Sleep    1s
         ${RETRY_COUNT}=    Evaluate    ${RETRY_COUNT} + 1
     END
     IF    not ${logout_success}
