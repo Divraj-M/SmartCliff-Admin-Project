@@ -68,9 +68,6 @@ Verify the Alert that image is required
     Element Text Should Be    ${Image_required}    Image is required
    
 Send input to the search box
-#     Click Element    xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div
-#     Input Text    xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div    Testing
-#     Sleep    5s
     Click Element    xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div
     Press Keys       xpath://*[@id="root"]/div[1]/main/div[2]/div[1]/div[1]/div/div    Testing
 
